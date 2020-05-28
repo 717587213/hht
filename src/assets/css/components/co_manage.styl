@@ -1,0 +1,53 @@
+.co_manage {
+  text-align left;
+  .co_even {
+    border-bottom 5px solid $table-border-color;
+    .co_even_head {
+      padding-left 20px;
+      line-height 50px;
+      border-bottom 2px solid $table-border-color;
+      display flex;
+      .co_even_head_have, .co_even_head_none {
+        margin-left 30px;
+        span{
+          color $gray-font-color!important
+        }
+      }
+    }
+    .co_even_body_ul {
+      margin-left 20px;
+      margin-right 20px;
+      padding 0 10px;
+      line-height 40px;
+      display flex ;
+      border-bottom 1px solid $table-border-color;
+      .co_even_body_symbol {
+        width 20%;
+        // margin-left 20px
+      }
+      .co_even_body_user {
+        width 30%;
+        text-align center
+      }
+      .co_even_body_have {
+        width 30%;
+        text-align center
+      }
+      .co_even_body_options {
+        flex 1;
+        text-align right;
+        span {
+          color: $blue-font-color;
+          margin-left 8px;
+          cursor: pointer;
+        }
+        .deff-text{
+          color: $yellow-color
+        }
+      }
+    }
+    .co_even_body_title {
+      color $gray-font-color!important
+    }
+  }
+}

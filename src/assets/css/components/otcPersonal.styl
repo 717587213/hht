@@ -1,0 +1,309 @@
+  .otc-personal{
+     min-height: calc(100vh - 207px);
+    margin-bottom:37px;
+    .personals-content{
+      width: 1200px;
+      margin: 0 auto;
+      border-radius:4px
+      margin-top: 30px;
+      background:$sub-background-color;
+        .pers-header{
+            height:130px;
+            border-bottom:4px solid $base-background-color;
+              .header-left{
+                  float:left;
+                    .portrait{
+                        width:67px;
+                        height:67px;
+                        margin:32px 45px 0 80px;
+                        float:left;
+                        border-radius:50%;
+                        opacity:0.6;
+                        position:relative;
+
+                        img{
+                            width:67px;
+                            height:67px;
+                            border-radius:50%;
+                        }
+                        .selects{
+                            display:inline-block;
+                            width:15px;
+                            height:15px;
+                            border-radius:50%;
+                            background:$blue-font-color;
+                            position:absolute;
+                            bottom:7px;
+                            right:-2px;
+                        }
+                    }
+                    .portraits{
+                        opacity:1
+                    }
+                    .prompt{
+                        cursor:pointer;
+                        color:$white-color;
+                        position:absolute;
+                        top:28px;
+                        left:10px;
+                    }
+                    .person{
+                        float:left;
+                        margin-top:15px;
+                        padding-right:55px;
+                        .phone{
+                            line-height:46px;
+                            span{
+                                font-weight:700;
+                                font-size:15px;
+                            }
+                            b{
+                                margin-left:10px;
+                                color:$blue-font-color;
+                                font-size:12px;
+                                font-weight:700px;
+                                cursor:pointer;
+                            }
+                        }
+                        .trandata{
+                            float:left;
+                            margin-right:37px;
+                            dt{
+                                color:$explain-font-color;
+                            }
+                            dd{
+                                margin-top:10px;
+                                padding-bottom:18px;
+                            }
+                        }
+                        .win{
+                            margin-right:0
+                        }
+                    }
+              }
+              .header-right{
+                  float:left;
+                  .authentication{
+                      float:left;
+                      margin-top:24px;
+                      border-left:1px solid $table-border-color;
+                      padding-left:86px;
+                      li{
+                          display:block;
+                          line-height:40px;
+                          height:40px;
+                          .title{
+                              margin-right:29px;
+                              color:$explain-font-color;
+                              float:left;
+                          }
+                          b{
+                              float:left; 
+                          }
+                          .status{
+                              float:left;
+                              display:inline-block;
+                               width: 8px;
+                                    height: 5px;
+                                    border-bottom: 2px solid $buy-color;
+                                    border-left: 2px solid $buy-color;
+                                    transform: rotate(-45deg);    
+                              margin:15px 0 0  10px;
+                          }
+                      }
+
+                  }
+                  .pertime{
+                      float:left;
+                       margin-top:24px;
+                       margin-left:103px;
+                       li{
+                         display:block;
+                          line-height:40px;
+                          height:40px;
+                          .time{
+                            margin-right:60px;
+                            color:$explain-font-color;
+                          }
+                          .release{
+                            color:$explain-font-color;
+                            margin-right:36px;
+                          }
+                       }
+                  }
+              }
+        }
+        .otclist{
+            .listTitle{
+                height:54px;
+                line-height:54px;
+                border-bottom:3px solid $subheade-background-color;
+                text-align:center;
+                font-size:16px;
+                span{
+                    height:55px;
+                    line-height:55px;
+                    display:inline-block;
+                    padding:0 10px;
+                    cursor:pointer;
+                }
+                  .blacklist{
+                      margin-left:246px;
+                  }
+                  .otcactive{
+                      height:55px;
+                      line-height:55px;
+                      border-bottom:3px solid $blue-font-color;
+                      color :$blue-font-color;
+                  }
+            }
+            .interlacing{
+                        background:$subheade-background-color;
+                    }
+            thead{
+                    line-height:48px;
+                    height:48px;
+                    th{
+                        width:1%;
+                        color:$explain-font-color;
+                    }
+                }
+                tbody{
+                    text-align:center;
+                    tr{
+                        height:45px;
+                        line-height:45px;
+                        .operation{
+                            cursor:pointer;
+                            .see{
+                                margin-right:5px;
+                                color:$blue-font-color;
+                                
+                            }
+                            .close{
+                                color:#f39800;
+                            }
+                           
+                        }
+                        .sell{
+                            color:$sell-color
+                        }
+                         .buy{
+                               color:$buy-color				
+                            }
+                        .remove{
+                            cursor:pointer;
+                            color:$blue-font-color;
+                        }
+                        .sell{
+                            color:$sell-color
+                        }
+                         .buy{
+                               color:$buy-color				
+                            }
+                    }   
+                }
+                 .loadings {
+                    width:30px;
+                    height:30px;
+                    margin 10% auto;
+                }
+            // 广告
+            .advertisement{
+                min-height:200px;
+                display:none;
+            }
+             .no_record{
+                     height:100px;
+                    .record{
+                        line-height:200px;
+                        text-align:center;
+                        font-size:14px;
+                    }
+                }
+            // 黑名单
+            .black{
+                display:none;
+                min-height:200px;
+            }
+            .exhibition{
+                display:block;
+          }
+        }
+    }
+       .prompt{
+         text-align:center; 
+       h4{
+        color:$red-color;
+        font-size:16px;
+       }
+       .titles{
+           line-height:100px;
+       }
+       span{
+           display:inline-block;
+           width:100px;
+           height:40px;
+           text-align:center;
+           line-height:40px;
+           background:$blue-font-color;
+           line-height:40px;
+           margin-top:50px;
+           border-radius:4px;
+           cursor:pointer;
+       }
+    }
+    .Portrait{
+        text-align:center;
+        .headPortrait{
+          position:relative;
+          margin-left:-50px;
+          left:50%;
+          width:100px;
+          height:100px;
+          cursor: pointer;
+        img{
+            width:100px;
+            height:100px;
+            display:inline-block;
+            border-radius:50%
+            position absolute;
+            top: 0;
+            left: 0;
+            
+        }
+        .image{
+            opacity:0.6
+        }
+        input{
+          display: inline-block;
+          width:100px;
+          height:100px;
+          position absolute;
+          top:0px;
+          left:0px;
+          z-index:5;
+          opacity:0;
+          cursor: pointer;
+        }
+        .prompt{
+            cursor:pointer;
+            position:absolute;
+            top:44px;
+            left:22px;
+            color:$white-color;
+        }
+        }
+    }
+    .dialog-pop .dialog-footer button{
+        opacity:0.6;
+    }
+       .rate{
+        opacity:1 !important;
+    }
+    .fileprompt {
+      font-size: 10px;
+      color: $explain-font-color;
+      margin-top: 20px;
+    }
+  }

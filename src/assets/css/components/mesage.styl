@@ -1,0 +1,146 @@
+  .mesage {
+    min-height: calc(100vh - 207px);
+    color: $base-font-color;
+    .mes-main{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: $base-background-color ;
+    margin-bottom:10px;
+      .mes-slide {
+        width:220px;
+        float:left;
+        background:$sub-background-color ;
+        border-radius:4px;
+        ul {
+          .active{
+            color: $blue-font-color;
+            }
+           li {
+             cursor:pointer;
+             line-height: 40px;
+             padding-left:40px;
+             border:none;
+             border-bottom:1px solid $table-border-color ;
+             font-size: 14px;
+           }
+          li:hover{
+            color :$blue-font-color
+          } 
+          li:last-child{
+            border-bottom:0
+          }
+        }
+        }
+        .mes-content{
+          width: 960px;
+          float: left;
+          background:$sub-background-color ;
+          margin-left 20px;
+          border-radius:4px;
+          min-height:600px;
+          .loading{
+            width:30px;
+            height:30px;
+            margin:20% auto;
+          }
+            .con-head{
+                line-height:60px;
+                border-bottom:2px solid $table-border-color ;
+                h6 {
+                  padding-left:30px;
+                  font-size:18px;
+                }
+              }
+            .mode-he{
+              height:40px;
+              line-height:40px;
+              border-bottom: 1px solid $table-border-color 
+              label {
+                float:left;
+                margin: 0 40px 0 20px;
+                .checkAll {
+                 float: left;
+                 width:13px;
+                 height:13px;
+                 margin:15px 5px 0 0 ;
+               }
+              }
+              .reade {
+                float:right;
+                margin-right:20px;
+                cursor: pointer;
+                i{
+                  cursor:pointer;
+                  margin-left:20px;
+                  color:$blue-font-color
+                }
+                &:hover{
+                  color:$blue-font-color
+                }
+              }
+               
+            }
+            .record {
+              line-height:70px;
+              text-align:center;
+            }
+            .mes-body {
+               li {
+                 padding:15px 0 ;
+                 border-bottom: 1px solid $table-border-color;
+
+                 label {
+                    float:left;
+                    margin-right:10px
+                    .checkbox{
+                        float: left;
+                        width:13px;
+                        margin:2px 5px 0 0 ;
+                        margin-left:20px
+                        height:15px
+                   }
+                      span {
+                        font-size:14px
+                      }
+                 }
+                 em {
+                   margin-left:10px;
+                     white-space: nowrap;
+                 }
+                 span{
+                   display:inline-block
+                   max-width:650px;
+                   word-wrap: break-word !important;
+                   word-break: break-all !important;
+                   line-height:15px
+                   float:left;
+                 }
+                 .mess{
+                   float:left;
+                   max-width:650px;
+                   cursor: pointer;
+                   overflow: hidden;
+                   white-space: nowrap;
+                   text-overflow: ellipsis;
+                }
+                .tiveRad{
+                  color: $gray-font-color
+                  }
+                .option {
+                 float:right;
+                 margin-right:20px;
+                   .delete{
+                     cursor: pointer;
+                     margin-left:20px;
+                     color: $blue-font-color 
+                    } 
+                }
+               } 
+               li:last-child{
+                   border-bottom:0
+               }
+            }
+          }
+      }
+  }

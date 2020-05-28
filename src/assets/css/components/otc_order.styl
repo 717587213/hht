@@ -1,0 +1,529 @@
+// otcOrder
+.order_wrap
+  width 1200px
+  margin 30px auto
+  min-height calc(100vh - 207px)
+  border-radius 4px
+  background $sub-background-color
+  position relative
+  .loading_wrap
+    width 100%
+    height 100%
+    position relative
+    min-height calc(100vh - 207px)
+    .loading
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+  .sideleft
+    box-sizing content-box
+    padding-right 374px
+    min-height calc(100vh - 207px)
+  .sideright
+    box-sizing content-box
+    width 374px
+    height 100%
+    min-height calc(100vh - 207px)
+    background-color #fff
+    position absolute
+    top 0
+    right 0
+    .side_head
+      box-sizing content-box
+      padding 0 20px
+      height 94px
+      line-height 94px
+      border-bottom 1px solid #e5e5e5
+      li
+        display inline-block
+        line-height 94px
+        vertical-align middle
+        margin-right 16px
+        h3
+          line-height 22px
+          font-size 16px
+          font-weight 600
+          color #333
+        p
+          line-height 22px
+          font-size 12px
+          color #bababa
+      .header_img
+        width 40px
+        height 40px
+        border-radius 50%
+        background #0a53cc
+        line-height 40px
+        text-align center
+        font-size 16px
+        color #fff
+        position relative
+        &.online:after
+          content ''
+          width 10px
+          height 10px
+          border-radius 50%
+          background #2b91f1
+          position absolute
+          bottom 0px
+          right 0px
+        img
+          border-radius 50%
+    .chatbox, .problemChatbox
+      box-sizing content-box
+      padding 20px 20px 0 20px
+      height calc(100% - 212px)
+      overflow-y scroll
+      overflow-x hidden
+      .complainCom
+        padding-bottom: 20px
+        line-height: 16px
+        .complain-time 
+          text-align: center
+          margin-bottom: 5px
+      .chat_item
+        margin-bottom 10px
+      .chat_left
+        padding-left 60px
+        position relative
+        .head_img
+          width 40px
+          height 40px
+          border-radius 50%
+          background #0a53cc
+          line-height 40px
+          text-align center
+          font-size 16px
+          color #fff
+          position absolute
+          left 0
+          img
+            border-radius 50%
+        .textbox
+          .chat_text
+            display inline-block
+            max-width 200px
+            padding 6px 10px
+            line-height 30px
+            font-size 12px
+            color #333
+            background-color #e8e8e8
+            border-radius 2px
+            word-break break-all
+            position relative
+            min-height: 30px
+            min-width: 20px
+            &::before
+              content ''
+              display inline-block
+              border 6px solid transparent
+              border-right 10px solid #e8e8e8
+              width 0
+              height 0
+              vertical-align middle
+              position absolute
+              left -15px
+              top 15px
+            img
+              max-width: 100%
+              display: block
+          .chat_time
+            line-height 24px
+            font-size 12px
+            color #aeaeae
+      .chat_right
+        padding-right 60px
+        position relative
+        text-align right
+        .head_img
+          width 40px
+          height 40px
+          border-radius 50%
+          background #0a53cc
+          line-height 40px
+          text-align center
+          font-size 16px
+          color #fff
+          position absolute
+          right 0
+          img
+            border-radius 50%
+        .textbox
+          .chat_text
+            display inline-block
+            max-width 200px
+            padding 6px 10px
+            line-height 30px
+            font-size 12px
+            color #333
+            background-color #e8e8e8
+            border-radius 2px
+            word-break break-all
+            position relative
+            text-align: left 
+            &::before
+              content ''
+              display inline-block
+              border 6px solid transparent
+              border-left 10px solid #e8e8e8
+              width 0
+              height 0
+              vertical-align middle
+              position absolute
+              right -15px
+              top 15px
+            img
+              max-width: 100%
+              display: block
+          .chat_time
+            line-height 24px
+            font-size 12px
+            color #aeaeae
+    .problemChatbox 
+      height calc(100% - 105px)
+      .ueser_header
+        display: block
+        background: url(../img/portrait.png) no-repeat
+        background-size: 100%;
+        width: 100%
+        height: 100%
+    .input_box
+      box-sizing content-box
+      width 100%
+      height 54px
+      line-height 54px
+      border-top 1px soild #e5e5e5
+      background-color #f8f8f8
+      position absolute
+      bottom 0
+      input
+        background-color #f8f8f8
+        border none
+        height 100%
+        width 260px
+        color #a5a5a5
+        box-shadow none
+        margin: 0 10px 0 10px
+        font-size 14px
+        color #333
+      button
+        display inline-block
+        width 84px
+        height 30px
+        border-radius 2px
+    .tab_nav 
+      height: 40px
+      text-align: center
+      line-height: 40px
+      background-color: #e8ecf1
+      span 
+        padding: 0 2px
+        margin: 0 10px
+        cursor: pointer
+        font-size: 14px
+        &.selected
+          color: $blue-font-color
+          
+// buy
+.buyBox
+  box-sizing content-box
+  padding 30px 40px
+  .loading_wrap
+    width 100%
+    height 100%
+    position relative
+    min-height calc(100vh - 207px)
+    .loading
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+  .contant01
+    padding-bottom 30px
+    h6
+      font-size 12px
+      line-height 30px
+      color $explain-font-color
+      span
+        color $base-font-color
+    h3
+      padding-bottom 10px
+      font-size 16px
+      line-height 30px
+      color $buy-color
+    p
+      font-size 12px
+      line-height 24px
+      color $explain-font-color
+      .import_text
+        color $yellow-color
+  .contant02
+    padding 10px 0
+    border-top 1px solid $base-background-color
+    border-bottom 1px solid $base-background-color
+    .pay_item
+      font-size 14px
+      line-height 32px
+      .imgbox
+        vertical-align middle
+        display inline-block
+        height 18px
+        margin-right 3px
+        img
+          position:relative
+          top:-4px
+      .payside
+        color $gray-font-color
+        padding-right:5px
+      .cannal
+        text-align center
+        font-size 14px
+        color $gray-font-color
+  .contant03
+    h3
+      padding 20px 0 40px 0
+      font-size 14px
+      line-height 22px
+      vertical-align middle
+      span
+        color $blue-font-color
+      img
+        vertical-align middle
+        margin-right 10px
+    .ispay
+      font-size 14px
+      padding 0 20px
+      line-height 40px
+      height 40px
+    .waitingCoin
+      display inline-block
+      font-size 14px
+      padding 0 20px
+      height 40px
+      line-height 40px
+      border-radius 2px
+      border 1px solid $blue-font-color
+    .goex_text
+      font-size 14px
+      color $explain-font-color
+      a
+        color $blue-font-color
+    .button_tip
+      display inline-block
+      margin-left 20px
+      padding 5px 10px
+      line-height 20px
+      color $gray-font-color
+      background-color $base-background-color
+      border-radius 2px
+      font-size 12px
+      word-break break-all
+      position relative
+      &::before
+        content ''
+        display inline-block
+        border 6px solid transparent
+        border-right 10px solid $base-background-color
+        width 0
+        height 0
+        vertical-align middle
+        position absolute
+        left -15px
+        top 14px
+    .tips
+      padding 40px 0
+      p
+        font-size 12px
+        line-height 20px
+        color $gray-font-color
+    .other_choose
+      padding-bottom 10px
+      button
+        font-size 14px
+        padding 0 20px
+        height 40px
+        line-height 40px
+        color $blue-font-color
+        background $base-background-color       
+.mobileverify-text2
+  margin-left: 55px;   
+  p
+    font-size 12px
+    line-height: 20px
+   .tite 
+        float:left;
+        line-height:38px;
+   .chipe
+         float:left;
+         margin-left: 5px;
+         width: 200px;
+         text-indent: 10px;
+.set_cliphe 
+     text-indent: 75px;
+     margin-top: 10px;
+// sell
+.sellBox
+  box-sizing content-box
+  padding 30px 40px
+  .loading_wrap
+    width 100%
+    height 100%
+    position relative
+    min-height calc(100vh - 207px)
+    .loading
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+  .contant01
+    padding-bottom 30px
+    h6
+      font-size 12px
+      line-height 30px
+      color $explain-font-color
+      span
+        color $base-font-color
+    h3
+      padding-bottom 10px
+      font-size 16px
+      line-height 30px
+      color $sell-color
+    p
+      font-size 12px
+      line-height 24px
+      color $explain-font-color
+      .import_text
+        color $yellow-color
+  .contant02
+    padding 10px 0
+    border-top 1px solid $base-background-color
+    border-bottom 1px solid $base-background-color
+    .pay_item
+      font-size 14px
+      line-height 32px
+      .imgbox
+        vertical-align middle
+        display inline-block
+        height 18px
+        margin-right 3px
+        img
+          position:relative
+          top:-4px
+      .payside
+        color $gray-font-color
+        padding-right:5px
+      .cannal
+        text-align center
+        font-size 14px
+        color $gray-font-color
+  .contant03
+    h3
+      padding 34px 0
+      font-size 14px
+      line-height 22px
+      vertical-align middle
+      span
+        color $blue-font-color
+      img
+        vertical-align middle
+        margin-right 10px
+    .ispay
+      font-size 14px
+      padding 0 20px
+      line-height 40px
+      height 40px
+    .waitingCoin
+      display inline-block
+      font-size 14px
+      padding 0 20px
+      height 40px
+      line-height 40px
+      border-radius 2px
+      border 1px solid $blue-font-color
+    .goex_text
+      font-size 14px
+      color $explain-font-color
+      a
+        color $blue-font-color
+    .button_tip
+      display inline-block
+      margin-left 20px
+      padding 5px 10px
+      line-height 30px
+      font-size 16px
+      color $gray-font-color
+      background-color $base-background-color
+      border-radius 2px
+      font-size 16px
+      word-break break-all
+      position relative
+      &::before
+        content ''
+        display inline-block
+        border 6px solid transparent
+        border-right 10px solid $base-background-color
+        width 0
+        height 0
+        vertical-align middle
+        position absolute
+        left -15px
+        top 14px
+    .tips
+      padding 40px 0
+      p
+        font-size 12px
+        line-height 20px
+        color $gray-font-color
+    .other_choose
+      padding-bottom 10px
+      button
+        font-size 14px
+        padding 0 20px
+        height 40px
+        line-height 40px
+        color $blue-font-color
+        background $base-background-color
+.problemImgUpload 
+  position: absolute
+  top: 3px
+  right: 5px
+  width: 84px
+  .tit 
+    display: none
+  .remarks     
+    display: none
+  .select-fileBtn 
+    display: none
+  .upload-main 
+    padding: 0
+    button 
+      font-size: 12px
+.contant_box
+  .max_number 
+    float: right
+    margin-top: 5px
+  .payterms
+    position: relative
+    display: inline-block
+    margin-right: 15px
+    img 
+      cursor: pointer
+  .big_qecode
+    position: absolute
+    width: 300px
+    top: -25px;
+    left: 48px;
+    z-index: 99;
+    img
+      width: 100%;
+.tishi 
+  color: $red-color
+  margin-left: 10px
+  font-size: 12px
+  
+
+
+
+
+

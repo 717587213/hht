@@ -1,0 +1,993 @@
+.co-coinTran {
+  color:  $base-font-color
+  transition:all 0.3s linear
+  .trade-center {
+      padding: 10px 10px 0 10px;
+      width: auto;
+      min-width: 1160px;
+      // max-width: 1920px
+  }
+  .left-sidebar {
+    float: left;
+    width: 283px;
+  }
+  .right-main {
+    width:calc(100% - 293px)
+    float:left;
+    padding-left: 10px;
+  }
+  .left-column {
+    float: left;
+    width: 310px;
+    margin-right: 10px;
+    position: relative;
+  }
+  .center-column {
+    float: left;
+    width:calc(100% - 585px)
+    margin-right: 10px;
+    position: relative;
+  }
+  .right-column {
+    width: 255px;
+    float: left;
+  }
+  .item_block {
+    background: $sub-background-color
+    margin-bottom: 10px;
+    .item_block_title {
+      line-height: 30px;
+      padding-left: 10px;
+      background: $heade-background-color;
+      font-size: 14px;
+    }
+    .item_block_tab {
+      background: $heade-background-color;
+      line-height: 25px;
+      .tab_menu {
+        display: inline-block;
+        border-top: 2px solid $heade-background-color
+        padding: 0 15px;
+        cursor: pointer;
+        &.selected {
+          border-color: $input-focus-border;
+          color: $input-focus-border;
+          background: $sub-background-color
+        }
+      }
+    }
+    .item_block_content {
+      position: relative;
+    }
+  }
+  // 委托交易
+  .trading_form {
+    padding: 10px;
+    .inline_input {
+      line-height: 25px;
+      height: 25px;
+      margin-top: 10px;
+      .th {
+        float: left;
+        width: 24%;
+        text-align: center;
+      }
+      .text-input {
+        width: 75%;
+        float: right
+        line-height: 25px;
+        height: 25px;
+        .unit {
+          float: left;
+          width: 55px;
+          height: 25px;
+          text-align: center;
+          background: $input-focus-border;
+        }
+        .inputText {
+          height: 23px;
+          line-height: 23px;
+          width: 66%;
+          padding-left: 4px;
+          border-radius: 0;
+        }
+      }
+    }
+    .trading_submit_btn {
+      margin-top: 20px;
+      height: 43px;
+      .trading_button {
+        width: 48%;
+        height: 43px;
+        line-height: 43px;
+        float: left;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 2px;
+        background: $buy-color;
+        cursor: pointer;
+        color: $white-color;
+        &.sell {
+          float: right;
+          background: $sell-color;
+        }
+        &.noSubmit {
+          opacity: 0.3;
+          cursor: no-drop;
+        }
+      }
+    }
+    .trading_info {
+      padding-top: 10px;
+      line-height: 28px;
+      color: $explain-font-color;
+      .cost {
+        height: 24px;
+        p {
+          width: 48%;
+          float: left;
+          &.sells {
+          float: right    
+          }
+        }
+      }
+    }
+  }
+  // 持有仓位
+  .lever_info_block {
+    .item_block_content {
+      padding: 15px;
+      height: 510px;
+      overflow: hidden;
+    }
+    .lever_info {
+      background: url(../img/lr_icon.png) no-repeat center center;
+      .left_info {
+        width: 48%;
+        float: left;
+      }
+      .right_info {
+        width: 48%;
+        float: right;
+        text-align: right;
+      }
+      .item {
+        padding: 10px 0;
+        line-height: 22px;
+        .num {
+          font-size: 14px;
+        }
+        .tit {
+          color: $explain-font-color;
+        }
+      }
+    }
+    .risk-bar {
+        -ms-flex: 1;
+        flex: 1;
+        background: linear-gradient(90deg,#00ce96,#ffd400,#eb1919);
+        position: relative
+    }
+    .risk-Percentage {
+        width: 100%;
+        height: 30px;
+        display: -ms-flexbox;
+        display: flex
+        position: relative;
+    }
+    .warning_icon {
+      top: 9px;
+      position: absolute;
+      right: 10px;
+    }
+    .gg_text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      line-height: 30px;
+      font-size: 16px;
+      color: $white-color;
+      text-shadow: 1px 1px 2px #333333;
+    }
+    .percentage_bar {
+      position: absolute;
+      width: 50%;
+      left: 0;
+      top: 0;
+      height: 30px;
+    }
+    .risk-num {
+      position: absolute;
+      z-index: 9;
+      left: 0;
+      padding-left: 7px;
+      top: 0px;
+      height: 30px;
+      line-height: 30px;
+      border-left: 3px solid $white-color;
+      font-size: 14px;
+      color: $white-color;
+      text-shadow: 2px 2px 3px #333333;
+      &.transition {
+        transition: all .3s linear;
+      }
+    }
+    .transaction-drag { 
+      position: relative; 
+      width: calc(100% - 18px); 
+      margin-top: 40px;
+    } 
+    .drag-def,
+    .drag-cover { 
+      position: absolute; 
+      display: block; 
+      height: 3px; 
+      top: 3px; 
+      left: 4px; 
+    } 
+    .drag-def { 
+      width: 100%; 
+      background: $border-blue-color; 
+    } 
+    .drag-cover { 
+      background: $input-focus-border; 
+    } 
+    .drag-turnColor { 
+      background: $input-focus-border; 
+    } 
+    .drag-step { 
+      position: absolute; 
+      background: $blue-font-color;
+      left: 0%; 
+      display: block; 
+      top: -3px; 
+      border-radius: 100%;
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      z-index:5; 
+      &.transition {
+        transition: all .2s ease;
+      }
+    } 
+    .transaction-drag i { 
+      background: $border-blue-color; 
+      position: absolute; 
+      top: 0; 
+      display: block; 
+      width: 10px; 
+      height: 10px; 
+      cursor: pointer;
+      z-index: 4; 
+      border-radius: 50%; 
+      text-align: right;
+    } 
+    .transaction-drag i.selected {
+      background: $input-focus-border
+    }
+    .transaction-drag i.drag-step0 { 
+      left: calc(25% + 4px); 
+    } 
+    .drag-step-wrap { 
+      display: inline-block; 
+      width: 100%; 
+      position: relative; 
+    }
+    .mark {
+      display: inline-block;
+      width: 30px;
+      text-align: center;
+      left: -10px;
+      top: 20px;
+      position: absolute
+    }
+  } 
+  // 币对 列表
+  .symbol_block {
+    height: 99px;
+    .tr-top {
+      background: $heade-background-color;
+      width: auto;
+      td {
+        text-align: center;
+        color: $explain-font-color;
+        width: 180px;
+        .symbol_item {
+          border-top: 3px solid $heade-background-color;
+          border-left: 2px solid $sub-background-color;
+          padding: 8px 0 0;
+          cursor: pointer;
+          h5 {
+            font-size: 14px;
+          }
+          .inof {
+            padding: 5px 0;
+            line-height: 18px;
+          }
+          &.selected {
+            border-top-color: $input-focus-border;
+            border-left: none;
+            padding-left: 2px;
+            background: $sub-background-color;
+            h5 {
+              color: $blue-font-color
+            }
+          }
+        }
+      }
+    }
+    .symbol_info {
+      padding: 17px 10px;
+      li {
+        list-style: initial;
+        margin-left: 20px;
+      }
+      .yx {
+        color: $input-focus-border;
+      }
+      .price {
+        background: $heade-background-color;
+        margin-left: 5px;
+        padding: 3px;
+      }
+    }
+  }
+  // 委托列表
+  .depth-block {
+    width: 100%;
+    .depth_list {
+      .list_item {
+        line-height: 22px;
+        position: relative
+        &.even {
+          background:$subheade-background-color;
+        }
+        span {
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          z-index: 2;
+          text-align: right;
+          overflow: hidden;
+        }
+        .td_price {
+          width: 21%;
+          padding-left: 5px;
+        }
+        .td_number {
+          width: 33%;
+          color: $explain-font-color;
+        }
+        .td_total {
+          width: 39%;
+          padding-right: 10px;
+          padding-left: 0;
+        }
+        &.th {
+          line-height: 26px;
+          span {
+            color: $explain-font-color;
+          } 
+        }
+        .td_bg {
+          position: absolute;
+          background: $sell-color;
+          top: 2px;
+          left: 15px;
+          width: 0;
+          height: 18px;
+          opacity: 0.2;
+        }
+        .num {
+          position: relative;
+          z-index: 9;
+        }
+      }
+      .depth_buy {
+        .td_bg {
+          background-color: $buy-color;
+        }
+      }
+    }
+    .tr-newPrice {
+      padding: 15px 0;
+      position: relative;
+      text-align: center;
+      height: 36px;
+      .price {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      .info {
+        .zdf {
+          color: $explain-font-color;
+        }  
+      }
+      .jb {
+        margin-left:10px;
+        display: inline-block;
+        i {
+          display: inline-block;
+          width: 3px;
+          margin-right: 2px;
+          height: 9px;
+          border: 1px solid $explain-font-color;
+        }
+        .selected {
+          background-color: $buy-color;
+          border-color: $buy-color;
+        }
+      }
+    }
+  }
+  // 图表
+  .charts-block {
+    font-size: 12px;
+    position: relative;
+    overflow: hidden;
+    .tabs-chart {
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-align: right;
+      z-index: 99;
+      line-height: 30px;
+      span {
+        display: inline-block;
+        margin: 0 5px;
+        cursor: pointer;
+        &.selected {
+          color: $blue-font-color;
+        }
+      }
+    }
+    .order-data-list {
+      clear: both;
+      padding: 10px;
+      min-height: 256px;
+      transiton: all 0.2s linear; 
+      -webkit-transition: all 0.2s linear; 
+      .tab-nav {
+        height: 38px;
+        line-height: 38px;
+        z-index: 2;
+        top: -1px;
+        // border-bottom: 1px solid $table-border-color;
+        li {
+          float: left;
+          height: 100%;
+          text-align: center;
+          cursor: pointer;
+          font-size: 14px;
+          padding: 0 10px;
+          margin: 0 10px;
+          &.selected {
+              color: $blue-font-color;
+              border-bottom: 1px solid $blue-font-color;
+          }
+        }
+        .refresh-btn {
+          float: right;
+        }
+      }
+      .order-list-box {
+        min-height: 150px;
+        transiton: all 0.2s linear; 
+        -webkit-transition: all 0.2s linear; 
+      }
+      .co_order_have {
+        width: 100%;
+        overflow: auto;
+      }
+      table {
+        tr {
+          position: relative;
+          border-bottom: 1px solid $table-border-color;
+          height: 30px;
+          line-height: 30px;
+          cursor: pointer;
+          overflow: hidden;
+           td {
+            text-align: center;
+           }
+           &:hover {
+            color: $blue-font-color;
+           }
+        }
+        .cancel_Deal {
+          color: $blue-font-color;
+          pading-bottom: 2px;
+          &:hover {
+            border-bottom: 1px solid $blue-font-color;
+            
+          }
+        }
+        .status_msg {
+          padding-right: 20px;
+          text-align: right;
+        }
+      }
+      .sibTable {
+        border: 1px solid $blue-font-color;
+        position: relative;
+        padding: 5px;
+        tr {
+          border: 0 none;
+          td{
+            color: $base-font-color;
+          }
+           &:hover {
+            td {
+              color: $blue-font-color;
+             }
+          }
+        }
+        &:after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            display: block;
+            position: absolute;
+            right: 45px;
+            top: -4px;
+            border-top: 1px solid $blue-font-color;
+            border-left: 1px solid $blue-font-color;
+            background: $sub-background-color;
+            transform: rotate(45deg);
+        }
+      }
+    }
+    #kline-loading {
+      position: absolute;
+      background: $sub-background-color;
+      top: 0px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      .bar {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3D(-50%, -50%, 0);
+      }
+    }
+    .echart-box {
+      width 97%;
+    }
+    .no-data {
+      text-align: center;
+      padding-top: 15px;
+    }
+    .coverKlineBox {
+      position: absolute;
+      top: 30px;
+      left:0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  // 近期交易
+  .side-newDel {
+    .item_block_content {
+      height: 514px;
+      overflow: hidden;
+      .item_content_bar {
+        height: 514px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        width: 255px;
+        .happy-scroll {
+          height: 514px;
+          width: 255px;
+        }
+      }
+    }
+    .newDel_list {
+      .list_item {
+        line-height: 23px;
+        height: 23px;
+        padding: 0 10px;
+        &.even {
+          background:$subheade-background-color;
+        }
+        span {
+          position: relative;
+          z-index: 2;
+          line-height: 23px;
+          height: 23px;
+        }
+        .td_price {
+          width: 30%;
+          float: left;
+          padding-left: 15px;
+          position: relative;
+          i {
+            position: absolute;
+            top: 4px;
+            left: 0px;
+          }
+        }
+        .td_number {
+          width: 30%;
+          float: left;
+          text-align: right;
+        }
+        .td_time {
+          width: 32%;
+          float: left;
+          text-align: right;
+          .ty {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  // 仓位订单列表
+  .order-data-list {
+    clear: both;
+    .item_block_title {
+      padding-left: 0;
+    }
+    .tab-nav {
+      height: 30px;
+      li {
+        float: left;
+        font-size: 12px;
+        padding: 0 20px;
+        line-height: 28px;
+        border-top: 2px solid $heade-background-color;
+        cursor: pointer;
+        &.selected {
+          color: $blue-font-color;
+          border-color: $input-focus-border;
+          background: $sub-background-color
+        }
+      }
+    }
+    .item_block_content {
+      padding 10px 0 0;
+      height: 180px;
+      overflow-y: hidden;
+      overflow-x: auto
+      position: relative;
+      .bar_content {
+        height: 180px;
+        overflow-y: hidden;
+        overflow-x: auto
+        position: relative;
+      }
+      .loadingBox {
+        position: absolute;
+        top: 30px;
+        width: 100%;
+        height: 100px;
+        background: $sub-background-color
+      }
+      .co_order_now {
+        width: 100%;
+        overflow-y: auto;
+        padding-bottom: 10px;
+        // height: 170px;
+      }
+      .co_order_now {
+        .order-list-table {
+          min-width: auto;
+        }
+      }
+      .co_order_have {
+        width: 100%;
+        min-height: 180px;
+        overflow: auto;
+      }
+      .order-list-table {
+        min-width: 1000px;
+        .even {
+          background:$subheade-background-color;
+        }
+        tr {
+          td:first-child , th:first-child{
+            text-align: left;
+            padding-left: 15px;
+          }
+          // td:first-child {
+          //   border-left: 3px solid #00ce96;
+          // }
+        }
+        th, td {
+          text-align: right;
+          padding-right: 15px;
+          vertical-align: middle;
+          line-height: 30px;
+          
+        }
+        .first_td {
+          text-align: left;
+          padding-left: 15px;
+        }
+        .inputTD {
+          // width: 160px;
+            text-align: right;
+          clear: both;
+          .lastTd {
+            clear: both;
+          }
+        }
+        .list-con {
+          height: 30px;
+          line-height: 30px;
+          text-align: right;
+        }
+        .tread-input {
+          height: 20px;
+          width: 70px;
+          border-radius: 0;
+          padding: 0 5px;
+          float: left;
+          margin-right: 10px;
+        }
+        .close_Deal , .allClose_Deal{
+          background-color: $input-focus-border;
+          display: inline-block;
+          height: 22px;
+          line-height: 22px;
+          padding: 0 5px;
+          cursor: pointer;
+        }
+        .allClose_Deal {
+          background-color: #d76415
+        }
+        .hover {
+          cursor: pointer;
+          min-width: 30px;
+          height: 30px;
+          .hover_show {
+            display: none;
+          }
+          &:hover {
+            .hover_show {
+              display: inline;
+            }
+            .hover_hide {
+              display: none;
+            }
+          }
+        }
+        .activeti {
+          color: $yellow-color
+        }
+      }
+    }
+    .dialog-pop {
+      .dialog-close {
+        display: block;
+        top: 15px;
+      }
+    }
+    .reviseMargin {
+      text-align: center;
+      .radio {
+        span {
+          margin: 0 10px;
+          display: inline-block;
+        }
+      }
+      .infoList {
+        padding: 20px 0;
+        .item {
+          line-height: 28px;
+          height: 28px;
+          background:$subheade-background-color;
+          &.even {
+            background: none;
+          }
+          span {
+            float: right;
+            width: 48%;
+            text-align: left;
+            &.tit {
+              text-align: right;
+              float: left;
+              color: $explain-font-color;
+            }
+          }
+        }
+      }
+      .input_box {
+        padding: 10px 0 0;
+        h4 {
+          font-size: 16px;
+          color: $input-focus-border;
+        }
+        .text-input {
+          width: 240px;
+          margin: 0 auto;
+          padding-top: 15px;
+          .unit {
+            float: left;
+            width: 55px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background: $input-focus-border;
+          }
+          .inputText {
+            height: 28px;
+            line-height: 28px;
+            width: 175px;
+            padding-left: 4px;
+            border-radius: 0;
+            float:left;
+          }
+        }
+      }
+    }
+  }
+
+  #kline-loading {
+    position: absolute;
+    background: $sub-background-color;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .bar {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3D(-50%, -50%, 0);
+    }
+  }
+  .table_no_data {
+    padding: 50px 0 0;
+  }
+  .dialog-pop .dialog-body {
+    height: 370px
+  }
+
+
+  //  页面动画 
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
+  .slide-left-enter-active {
+    transition: all .5s ease;
+  }
+  .slide-left-leave-active {
+    transition: all .5s ease;
+  }
+  .slide-left-enter, .slide-left-leave-to {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  .slide-right-enter-active {
+    transition: all .5s ease;
+  }
+  .slide-right-leave-active {
+    transition: all .5s ease;
+  }
+  .slide-right-enter, .slide-right-leave-to {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  .cotrade_loading {
+    left 50%;
+    width 51px;
+    // margin-top px;
+    // width 100%;
+    top 40%
+    transform: translateX(-50%);
+    position relative;
+  }
+
+  @-webkit-keyframes line-spin-fade-loader { 50% { opacity: 0.6; } 100% { opacity: 1; } }
+  @keyframes line-spin-fade-loader { 50% { opacity: 0.6; } 100% { opacity: 1; } }
+  .minloading { width: 20px; height: 20px; display: inline-block; position: relative;}
+  .line-spin-fade-loader {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 9px;
+    top: 9px;
+  }
+  .line-spin-fade-loader > div:nth-child(1) {
+    top: 4px;
+    left: 0;
+    -webkit-animation: line-spin-fade-loader 1.2s 0.12s infinite ease-in-out;
+            animation: line-spin-fade-loader 1.2s 0.12s infinite ease-in-out; }
+  .line-spin-fade-loader > div:nth-child(2) {
+    top: 3.3636px;
+    left: 3.3636px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-animation: line-spin-fade-loader 1.2s 0.24s infinite ease-in-out;
+            animation: line-spin-fade-loader 1.2s 0.24s infinite ease-in-out; }
+  .line-spin-fade-loader > div:nth-child(3) {
+    top: 0;
+    left: 4px;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-animation: line-spin-fade-loader 1.2s 0.36s infinite ease-in-out;
+            animation: line-spin-fade-loader 1.2s 0.36s infinite ease-in-out; }
+  .line-spin-fade-loader > div:nth-child(4) {
+    top: -3.3636px;
+    left: 3.3636px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-animation: line-spin-fade-loader 1.2s 0.48s infinite ease-in-out;
+            animation: line-spin-fade-loader 1.2s 0.48s infinite ease-in-out; }
+  .line-spin-fade-loader > div:nth-child(5) {
+    top: -4px;
+    left: 0;
+    -webkit-animation: line-spin-fade-loader 1.2s 0.6s infinite ease-in-out;
+            animation: line-spin-fade-loader 1.2s 0.6s infinite ease-in-out; }
+  .line-spin-fade-loader > div:nth-child(6) {
+    top: -3.3636px;
+    left: -3.3636px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-animation: line-spin-fade-loader 1.2s 0.72s infinite ease-in-out;
+            animation: line-spin-fade-loader 1.2s 0.72s infinite ease-in-out; }
+  .line-spin-fade-loader > div:nth-child(7) {
+    top: 0;
+    left: -5px;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-animation: line-spin-fade-loader 1.2s 0.84s infinite ease-in-out;
+            animation: line-spin-fade-loader 1.2s 0.84s infinite ease-in-out; }
+  .line-spin-fade-loader > div:nth-child(8) {
+    top: 3.3636px;
+    left: -3.3636px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-animation: line-spin-fade-loader 1.2s 0.96s infinite ease-in-out;
+            animation: line-spin-fade-loader 1.2s 0.96s infinite ease-in-out; }
+  .line-spin-fade-loader > div {
+    background-color: $blue-font-color;
+    /* -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; */
+    position: absolute;
+    width: 1px;
+    height: 4px; }
+  .inputAct {
+    border-color $input-focus-border!important;
+  }
+  .notLogin {
+    text-align: center;
+    line-height: 100px;
+  }
+  .coverKlineBox {
+    position: absolute;
+    top: 0px;
+    z-index: 99;
+    left:0;
+    right: 0;
+    bottom: 0;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

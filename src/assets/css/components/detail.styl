@@ -1,0 +1,135 @@
+.detail {
+  min-height: calc(100vh - 207px);
+  background: $base-background-color;
+  color: $base-font-color;
+
+  .info-details {
+    width:1200px;
+    margin:0 auto;
+    background: $sub-background-color;
+    margin-top:20px;
+    margin-bottom:20px;
+    border-radius:4px;
+        .ques-tag {
+      height: 60px;
+      line-height: 60px;
+      overflow: hidden;
+      border-bottom: 1px solid $base-background-color ;
+      padding-left: 24px;
+
+      .tab_switch {
+        border-bottom: 1px solid $blue-font-color ;
+        color: $blue-font-color ;
+      }
+
+      li {
+        display: inline-block;
+        float: left;
+        display: inline-block;
+        margin: 0 25px;
+        font-size: 16px;
+        cursor: pointer;
+        float: left;
+        height: 59px;
+      }
+    }
+
+    .details-box {
+      width: 900px;
+      margin-left: 22px;
+      padding: 20px 20px 40px 20px;
+      // 返回列表
+      .back {
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        border-radius: 2px;
+        cursor: pointer;
+        font-size: 13px;
+        margin: 10px 0 20px 10px;
+      }
+      /* 问题信息列表 */
+      .problem-list {
+        ul li {
+          float: left;
+          padding: 0 0 20px 130px;
+          width: 318px;
+        }
+        span {
+          margin-left: -120px;
+          float: left;
+        }
+        .problem-pic {
+          width: 100%;
+          p {
+            line-height: 26px;
+            word-break: break-all; 
+          }
+          img {
+            max-width: 200px;
+            max-height: 200px;
+          }
+        }
+      }
+    }
+    // 问题追加
+    .questions-list {
+      margin-left: 10px;
+      .prom{
+        color :red
+        }
+      .dispose-list {
+        padding: 10px 200px 10px 90px;
+        margin-bottom: 10px;
+        border: 1px solid $border-blue-color ;
+        border-radius: 5px;
+        span {
+          margin-left: -78px;
+          float: left;
+        }
+        p {
+          font-size: 12px;
+          width: 760px;
+          word-wrap:break-word;
+          line-height:20px;
+          margin-top: -4px;
+        }
+
+        .time {
+          margin-top: 5px;
+        }
+      }
+
+      .additional {
+        padding-top: 20px;
+
+        span {
+          display: block;
+          padding-bottom: 5px;
+        }
+
+        .chart {
+          padding-bottom: 20px;
+        }
+
+        textarea {
+          width: 876px;
+          height: 150px;
+          line-height:15px
+          padding: 8px 6px;
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 20px;
+        }
+        #btn {
+          width: 263px;
+          line-height: 40px;
+          border-radius: 2px;
+
+        }
+      }
+    }
+  }
+}

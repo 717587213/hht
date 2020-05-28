@@ -1,0 +1,199 @@
+<!DOCTYPE html><html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="keyWords" content="比特币交易平台,比特币,BTC,比特币价格,比特币行情,USDT,莱特币,BCH,以太坊,ETH,以太经典">
+  <meta name="description" content="专业虚拟货币交易站,使莱特币LTC,以太坊ETH,BCH,以太经典(ETC),达世币DASH,瑞波XRP,BCH,PAY,BTG,OMG,EOS,RDN,SNT,KNC,MTL,QSP,RCN,AST,TNT,BCD,TNB等数字货币以比特币BTC,USDT进行交易！提供实时比特币价格,比特币行情.">
+  <!-- 忽略页面中的数字识别为电话号码 -->
+  <meta name="format-detection" content="text=no">
+  <!-- 忽略页面中的邮箱格式为邮箱 -->
+  <meta name="format-detection" content="password=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script type="text/javascript" src="/static/charting_library/charting_library.min.js"></script>
+  <title></title>
+  <style>
+    #tips{
+      display: none;
+      height: 36px;
+      line-height: 36px;
+      text-indent: 30px;
+      color: #ffffff;
+      position: relative;
+      background: #b2353f;
+      display: none;
+    }
+    #tips .clos{
+      float: right;
+      margin-right: 30px;
+      display: inline-block;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  </style>
+  <script type="text/javascript">
+   var host = location.host.split('.')[location.host.split('.').length - 2] + '.' + location.host.split('.')[location.host.split('.').length - 1];
+   window.setHost = function (test, custom) {
+     if (!test) { test = '' }
+     if (test === 'false') {
+       test = ''
+     }
+     let mainHost = custom ? custom + '.' : test + 'www.'
+     window.HOST_API = {
+        // 项目API接口域名地址：
+       ex_api: test + 'webapi.' + host, // 公共接口，必填！（含币币交易）
+       co_api: test + 'coapi.' + host, // 合约交易接口
+       otc_api: test + 'otcapi.' + host, // 场外交易接口
+        // 如果做分站，且有多个分站，以下为各分站的访问地址
+       ex_pc_url: mainHost + host, // 币币交易PC
+       ex_h5_url: test + 'm.' + host, // 币币交易H5
+       otc_pc_url: test + 'otc.' + host, // 场外交易PC
+       otc_h5_url: test + 'motc.' + host, // 场外交易H5
+       co_pc_url: test + 'co.' + host, // 合约交易PC
+       co_h5_url: test + 'mco.' + host, // 合约交易H5
+       updata_url: 'upload.' + host // 上传图片地址
+     }
+     let pcv = '2018-11-07 3.4.5.2_bugfix_1106'
+   }
+  </script>
+</head>
+<body>
+    <div id="tips">ChainUP's reminder: you are using an outdated browser. Please upgrade to the latest version for better  experience.<span class="clos">×</span></div>
+  <div id="app"></div>
+    <script src="https://www.sobot.com/chat/frame/js/entrance.js?sysNum=81fd739fd2d44937b31fa6b0ccb4a305" class="zhiCustomBtn" id="zhichiScript" data-args=""></script>
+    <script>
+      var zhiManager = (getzhiSDKInstance());
+      zhiManager.set("color", '2b89e1');  //取值为0-9a-f共六位16进制字符[主题色]    | 默认取后台设置的颜色
+      zhiManager.set("powered", 'true'); //true[显示悬浮聊天窗体下方公司标识信息]   false[不显示]   | 默认显示
+      zhiManager.set('customBtn', 'true'); //true[自定义按钮]  false[使用系统默认咨询按钮]     | 默认为系统咨询按钮
+      zhiManager.set('manual', 'true');   //true[手动初始化]   false[自动初始化]  | 默认调用后自动初始化
+      zhiManager.set('manTrace', true);   //true[开启用户访问轨迹收集]  false[不开启]  |默认不开启用户访问轨迹收集
+      zhiManager.set('title', '联系客服'); //咨询按钮文案
+      //zhiManager.set('isInviteFlag', 'false'); //true[开启主动邀请功能]  false[不开启] |默认不开启
+      zhiManager.set('location', 1); //1[系统默认按钮靠右显示]  3[系统默认按钮靠左显示]
+      zhiManager.set('horizontal', 50); //水平边距 px
+      zhiManager.set('vertical', 50); //垂直边距  px
+      //zhiManager.set('tipTitle', '客服邀请您进入会话'); //主动邀请文案
+      //zhiManager.set('submitBtnTitle', '接受邀请'); //主动邀请功能接受按钮文案
+      //zhiManager.set('invite', 1); // 是否开启自动邀请  1 开启 0 关闭  | 默认关闭
+      //zhiManager.set('firstTimeout', 1); // 第一次加载延迟邀请时间   时间为秒
+      //zhiManager.set('overTimeout', 10); //拒绝后再次邀请时间       时间为秒
+      //zhiManager.set('inviteCount', 1); //一天之内共邀请多少次
+      zhiManager.set('lan', 'cn'); //支持语言   cn 中文  en 英文   默认为 中文
+      zhiManager.set('telShowFlag', 'true');   //true[显示手机号输入框]  false[不显示] |  默认显示
+      zhiManager.set('telFlag', 'false');  //true[手机号为必填项]  false[为选填项]  | 默认必填
+      zhiManager.set('satDegree_A', true); //true[开启主动评价功能] false[不开启] | 默认开启
+      zhiManager.set('msgflag', false); //false[开启窗体和结束会话后的留言功能] true[不开启] | 默认开启
+      zhiManager.set('isMessageFlag', true); //true[开启输入框留言功能] false[不开启] | 默认开启
+      zhiManager.set('isFeedBackFlag', true); //true[开启输入框满意度评价功能] false[不开启] | 默认开启
+      zhiManager.set('artificial', true);  //true[默认隐藏转人工 遇未知问题时显示转人工]   false[直接显示转人工]  | 默认不隐藏转人工
+      //zhiManager.set('groupId','xxxxxxxxxxxxxx');   //指定技能组
+      //对接用户身份、预留字段、自定义字段（旧版，不推荐）
+      // zhiManager.set('userinfo', { //设置用户信息
+      //   tel: '',   //电话或手机
+      //   email: '',   //邮箱
+      //   uname: '',   //昵称
+      //   visitTitle: '',   //对话页标题，若不传入系统将获取用户打开咨询组件时所在页面的标题
+      //   visitUrl: '',   //对话页URL，若不传入系统将获取用户打开咨询组件时所在页面的URL
+      //   face: '',   //头像URL
+      //   realname: '',   //真实姓名
+      //   weibo: '',   //微博账号
+      //   weixin: '',   //微信账号
+      //   qq: '',   //QQ号
+      //   sex: '', //0 男 1 女
+      //   birthday: '',   //生日，如“1990-01-01”
+      //   remark: '',   //用户的备注信息
+      //   params: '{"等级":"VIP用户","客户状态":"意向客户"}'   //自定义用户信息字段
+      // });
+      //对接用户身份、预留字段、自定义字段（新版，推荐）
+      //var obj ={"weibo":"weicat","sex":"女","birthday":"2017-05-17","cardType":"身份   证","cardNo":"13010319xxxx56xxxx","address":"北京","position":"tl","remark":"g   ood","customField1":"12","customField2":"text"};
+      //var objStr = JSON.stringify(obj);
+      //zhiManager.set("customerFields", objStr);
+      zhiManager.set('size', { //悬浮窗宽度与高度
+        // 最小宽度360像素，最大宽度640像素，默认360像素
+        'width': 460,
+        // 最小高度430像素，最大高度720像素，默认540像素
+        'height': 680
+      });
+      // zhiManager.set('preVisitArgs',{
+      //   'preAbstract':'来源页的摘要  可不传',
+      //   'preVisitUrl':'来源页的url   可不传',
+      //   'preVisitTitle':'来源页的标题    可不传',
+      //   'preThumbnail':'来源页的缩略图  可不传',
+      //   'preTags' :'来源页的标签    可不传'
+      // });
+      // zhiManager.set('curVisitArgs',{
+      //   'curAbstract':'当前页的摘要  可不传',
+      //   'curVisitUrl':'当前页的url   可不传',
+      //   'curVisitTitle':'当前页的标题    可不传',
+      //   'curThumbnail':'当前页的缩略图  可不传',
+      //   'curTags' :'当前页的标签    可不传'
+      // });
+      //通过参数设置H5聊天页面显示商品信息内容
+      // zhiManager.set("title_info","智齿_商品详情页_小智智能");  //必传 需编码
+      // zhiManager.set("url_info","http://www.sobot.com/order/zc.html"); //必传 需编码
+      // zhiManager.set("abstract_info","更精确的理解，更精确地回答，在闲聊寒暄中，拉近与客户的距离，导入知识库，意想不到的方便快捷，最简单的知识添加，事半功倍。"); //需编码
+      // zhiManager.set("label_info","2000"); //需编码
+      // zhiManager.set("thumbnail_info","http://test.sobot.com/console/images/logo_new.png"); //需编码
+      // //自定义按钮后可设置该值改变悬浮窗的水平位置
+      // zhiManager.set("customMargin",200);
+      // //手动初始化时 通过 load 方法调用 js 组件
+      // zhiManager.on("load", function(ret) {
+      //   zhiManager.initBtnDOM();
+      // });
+      //自定义按钮时 通过该方法获取客服发送的未读内容 & 消息数
+      // zhiManager.on("receivemessage", function(ret) {
+      //   /**
+      //    * 返回格式：[{content:'您好',msgId:'615b0a3801804f14be1d456e11b329af',customName:'智齿科技'}]
+      //    */
+      //   console.log(ret);
+      // });
+      //自定义按钮时 通过该方法获取客服发送的离线消息数
+      // zhiManager.on("unread.count",function(data){
+      //   console.log(data);
+      // });
+    </script>
+  <script>
+    window.onload = function () {
+      var tip = document.getElementById('tips')
+      // 关闭弹框
+      tip.onclick = function () {
+        tip.style.display = 'none'
+      }
+      var browser = navigator.userAgent.toLowerCase()
+   // IE
+      var IE_DEFAULT = 11.0
+      if (browser.match(/msie ([\d.]+)/) !== null) {
+        if (browser.indexOf('msie') > -1) {
+          var isIE = parseInt(browser.match(/msie ([\d.]+)/)[1])
+          if (isIE < IE_DEFAULT) {
+            tip.style.display = 'block'
+          }
+        }
+      }
+     // Chrome
+      var CHROM_DEFAULT = 49
+      if (browser.indexOf('chrome') > -1) {
+        let chrome = parseInt(browser.match(/chrome\/([\d.]+)/))
+        if (chrome < CHROM_DEFAULT) {
+          tip.style.display = 'block'
+        }
+      }
+      // Firefox
+      var FIREFOX_DEFAULT = 61
+      if (browser.indexOf('firefox') > -1) {
+        let Firefox = parseInt(browser.match(/firefox\/([\d.]+)/)[1])
+        if (Firefox < FIREFOX_DEFAULT) {
+          tip.style.display = 'block'
+        }
+      }
+      // Safari
+      let SAFARI_DEFAULT = 11.1
+      if (browser.indexOf('safari') > -1 && browser.indexOf('chrome') < 0) {
+        let Safari = parseInt(browser.match(/version\/([\d.]+)/)[1])
+        if (Safari < SAFARI_DEFAULT) {
+          tip.style.display = 'block'
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+.m-header {
+  display: block !important; 
+  color: $heade-font-color;
+  position:relative;
+  .head-bg{
+     background: $public-header-background;
+     height:71px;
+     width: 100%;
+     position: absolute;
+     left:0;
+     top:0;
+     z-index:11;
+  }
+  .header {
+    padding:0 20px;
+    height: 72px;
+    margin: 0 auto;
+    line-height: 72px;
+    font-size: 14px;
+    position:relative;
+    z-index:12;
+    .logo {
+      float: left;
+      margin-right:30px;
+      width: 142px;
+      img {
+        vertical-align: middle;
+        width: 100%;
+      }
+    }
+    .header-ul {
+      float: left;
+      li {
+        float: left;
+        position:relative
+        cursor: pointer;
+        &.cut_line{
+          padding:0 20px;
+        }
+        & p.more_box{
+          display:none;
+          position: absolute;
+          top:70px;
+          left:-18px;
+          width:150%;
+          background:$heade-background-color;
+          padding-bottom:10px;
+          a{
+            line-height:34px;
+            display:block;            
+          }
+        }
+        &.nav_li:hover p.more_box{
+          display:block
+        }
+        a {
+          position:relative;
+          color: $heade-font-color;
+          margin:0 10px;
+          &:hover {
+            color: $blue-font-color;
+          }
+          &.new_ad {
+            color: $yellow-color
+          }
+          &.more_link:after{
+            content:'';
+            position:absolute;
+            width:0;
+            height:0;
+            border-style:solid;
+            border-width:4px;
+            border-color:$base-font-color rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+            right:-10px;
+            top:50%;
+            margin-top:-2px;
+          }
+          &:hover:after,
+          &.router-link-active:after {
+            border-color:$blue-font-color rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+          }
+          // &.sub_link{
+          //   margin:5px;
+          // }
+          span{
+            position:absolute;
+            width:0;
+            height:2px;
+            background:$blue-font-color;
+            line-height:0;
+            left:0;
+            bottom:-10px;
+          }
+          &.router-link-active {
+            color: $blue-font-color;
+            span{
+              width:100%;
+            }
+          }
+          &.deff-text{
+            color:$yellow-color
+          }
+        }
+      }
+      li:hover, focus {
+        color: $blue-font-color;
+      }
+    }
+  }
+  .header-right {
+    float: right;
+    .personal_menu {
+      display: inline-block
+    }
+    .lang {
+      display: inline-block;
+      .flag_icon {
+        background: url(./../img/flag.png) no-repeat;
+        display: inline-block;
+        width: 20px;
+        height: 15px;
+        vertical-align: middle;
+        margin-right: 3px;
+        &.zh_CN {
+          background-position: -29px 0;
+        }
+        &.el_GR {
+          background-position: -29px 0;
+        }
+        &.en_US {
+          background-position: 0 0;
+        }
+        &.ko_KR {
+          background-position: -29px -18px;
+        }
+        &.mn_MN {
+          background-position: 0px -18px;
+        }
+        &.ja_JP {
+          background-position: -115px 0;
+        }
+        &.ru_RU {
+          background-position: -57px -17px;
+        }
+      }
+    }
+    .mase{
+      position:relative;
+    }
+    .tegther_icon{position:relative;}
+    .rightNav_item {
+      display: inline-block
+      padding-left: 10px;
+      cursor: pointer;
+      position:relative;
+      // &:hover {
+      //   color: $blue-font-color;
+      // }
+      a {
+        color: $heade-font-color;
+        &:hover {
+          color: $blue-font-color;
+        }
+        &.router-link-active {
+          color: $blue-font-color;
+        }
+        &.creatButton{
+          display:inline-block;
+          padding:0 20px;
+          font-size:14px;
+          height:40px;
+          line-height:40px;
+          text-align:center;
+          background:$blue-font-color;
+          border-radius:4px;
+          color:$white-color !important;
+        }
+        &:hover .creatButton{
+          color:$white-color;
+        }
+        &.myadcolor{
+          color:$blue-font-color;
+        }
+      }
+     .msages{
+       font-size: 20px;
+       vertical-align: middle;
+       }
+       b{
+          position: absolute;
+          display:block;
+          width: 5px;
+          height:5px
+          background: red;
+          border-radius: 50%;
+          top:-2px;
+          left:-2px;
+        }
+      &.abuot_lists .select_menu ul {
+        left:-10px;
+      }
+      .qr_code{
+        width:100px;
+        height:115px;
+        background:#fff;
+        position:absolute;
+        left:0px;
+        border-radius:4px;
+        img{
+          width:100px;
+          height:100px;
+          position:relative;
+        }
+        i{
+          position:absolute;
+          left:23px;
+          bottom:-21px;
+          color:#333333;
+
+        }
+      }
+    }
+    .right_active{
+      color: $blue-font-color;
+    }
+  }
+  .router-link-active {
+    color: $blue-font-color;
+  }
+  .lang {
+    cursor: pointer;
+  }
+  .select_menu {
+    position: relative;
+    cursor: pointer;
+    padding-right: 18px;
+    ul {
+      position: absolute;
+      display: none;
+      z-index: 9;
+      width: auto;
+      min-width: 100px;;
+      background: $public-header-background;
+      top: 72px;
+      right: 0;
+      li {
+        line-height: 32px;
+        width: auto;
+        padding: 0 10px;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        color: $heade-font-color;
+        i {
+          margin-right: 10px;
+        }
+        &:hover, &.selected {
+          color: $blue-font-color;
+          i {
+            color: $blue-font-color;
+          }
+        }
+      }
+    &.themeList {
+        li {
+          text-align: center;
+        }
+      }
+    }
+    &:hover {
+      ul {
+        display: block;
+      }
+    }
+    .icon {
+      display: inline-block;
+      background $heade-font-color;
+      vertical-align: middle;
+      margin-top: -5px;
+    }
+    .icon-down {
+      position: absolute;
+      top: 32px;
+      font-size:12px;
+      right: 0;
+      font-weight: bold;
+    }
+  }
+}
+.setThemePop {
+  font-size: 12px;
+  .setTheme {
+    margin-top: 10px;
+    padding-top: 10px;
+    .inlint-title {
+      color: #7080a3;
+      font-size: 12px;
+      margin: 0px 0 10px;
+      text-align: left;
+    }
+    .radioLine {
+      .tadioTd {
+        padding-right: 15px;
+        cursor: pointer;
+        label {
+          margin-left:5px;
+          cursor: pointer;
+        }
+        input {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

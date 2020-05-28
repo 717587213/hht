@@ -1,0 +1,110 @@
+.agent{
+    min-height: calc(100vh - 377px);
+    background: $base-background-color ;
+    color:$base-font-color;
+    .agent-list {
+            width: 1200px;
+            margin: 0 auto;
+            margin-top: 20px;
+            border-radius: 2px;
+            background:$sub-background-color ;
+            margin-bottom:20px;
+            min-height:400px;
+        .agent-head{
+            height:60px;
+            line-height:60px;
+            border-bottom:1px solid $base-background-color;
+            padding-left:24px;
+            .agent-tag{
+                font-size:16px;
+                float:left;
+                span{
+                    display:inline-block;
+                    margin:0 25px;
+                    cursor:pointer;
+                }
+                .agentive{
+                    color:$blue-font-color;
+                    border-bottom:1px solid $blue-font-color;
+                }
+            }
+            .head-right{
+                float:right;
+                .wgt-inlineInput.readOnly input, .wgt-inlineInput.readOnly div{
+                    opacity:1
+                }
+                 .wgt-inlineInput{
+                        float:left;
+                    }
+                span{
+                    display:inline-block;
+                    float:left;
+                    margin-right:10px;
+                }
+                .popover-container{
+                        float:left;
+                        input{
+                            text-indent:10px;
+                        }
+                    }
+                .start{
+                    float:left;
+                    
+                }
+               .select,.ent{
+                    float:left;
+                    margin-left:20px;
+                }
+                .search{
+                    height:36px;
+                    width:120px; 
+                    margin:0 25px;
+                }
+        
+            }
+        }
+        .agent-content{
+            padding:20px;
+            .loading{
+               width:30px;
+               height:30px;
+               margin 10% auto;
+            }
+           .detailedList,.summaryList{
+                display:none                
+            }
+            .exhibition{
+                display:block;
+            }
+            table{
+                thead{
+                    th{
+                        width:1%;
+                        height:45px;
+                        line-height:45px;
+                        color:$explain-font-color;
+                    }
+                }
+                tbody{
+                    text-align:center;
+                    tr{
+                         height:45px;
+                        line-height:45px;
+                    }
+                }
+            }
+            .no_record{
+                .record{
+                     line-height:400px;
+                     font-size:16px;
+                }
+            }
+        }
+  }
+      .wgt-inlineInput .inline.select-input .icon-down{
+        top:23px
+      }
+    .wgt-inlineInput .inline .select-option-box{
+        top:52px;
+    }
+}

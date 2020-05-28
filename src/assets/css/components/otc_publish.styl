@@ -1,0 +1,312 @@
+.publish {
+  width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+  min-height: 600px;
+  background: $sub-background-color;
+
+  .publish_top {
+    border-bottom: 3px solid $table-border-color;
+  }
+  .publish_top .creat {
+    height: 85px;
+    line-height: 85px;
+    text-align: center;
+    font-size: 18px;
+    color: $input-focus-border;
+  }
+  .publish_top ul {
+    overflow: hidden;
+  }
+  .publish_top ul li {
+    width: 280px;
+    float: left;
+    margin-left: 90px;
+  }
+  .publish_top ul li .pImg {
+    height: 140px;
+    padding-top: 30px;
+  }
+  .publish_top ul li .pImg img {
+    height: 110px;
+    width: 110px;
+    display: block;
+    margin: 0 auto;
+  }
+  .publish_top ul li .pText {
+    line-height: 24px;
+    text-align: center;
+    min-height: 110px;
+  }
+  .order_type,
+  .order_limit,
+  .receipt_type,
+  .pay_type {
+    padding: 20px 50px 0;
+    border-bottom: 3px solid $table-border-color;
+  }
+  .remark {
+    padding: 20px 50px;
+  }
+  .setPay {
+    line-height:76px;
+  }
+  .order_type tr,
+  .order_limit tr,
+  .receipt_type tr,
+  .pay_type tr {
+    height: 76px;
+  }
+  .order_type td,
+  .order_limit td,
+  .receipt_type td,
+  .pay_type td {
+    vertical-align: middle;
+  }
+  .order_type td s,
+  .order_limit td s,
+  .receipt_type td s,
+  .pay_type td s {
+    position: absolute;
+    top: 16px;
+    right: 674px;
+    z-index: 11;
+  }
+  .order_type td .wgt-inlineInput,
+  .order_limit td .wgt-inlineInput {
+    float: left;
+    margin-right: 20px;
+  }
+  .order_type td span,
+  .order_limit td span {
+    float: left;
+    display: inline-block;
+    line-height: 44px;
+    margin-right:10px;
+  }
+  .order_limit td span {
+    margin-left: 50px;
+  }
+  .customInput {
+    height: 40px;
+    text-indent: 10px;
+    padding-right: 50px;
+  }
+  .customCon {
+    position: relative;
+    float: left;
+    width: 150px;
+  }
+  .order_type td .customCon s {
+    position: absolute;
+    top: 0;
+    height: 40px;
+    right: -20px;
+    line-height: 40px;
+  }
+  .order_type .amount {
+    position: relative;
+    width: 150px;
+    float: left;
+  }
+  .order_type .balance {
+    float:left;
+    margin-left:70px;
+    color:$yellow-color;
+    line-height:40px;
+  }
+  .order_type .all{
+    color:$yellow-color;
+    padding-left:50px;
+  }
+  .order_type .amount s {
+    position: absolute;
+    right: -40px;
+    top: 15px;
+    z-index: 11;
+  }
+  .order_type .amount input {
+    padding-right: 50px;
+    width: 150px;
+  }
+  .order_limit h5,
+  .receipt_type h5,
+  .pay_type h5 {
+    height: 30px;
+    font-size: 14px;
+    color: $input-focus-border;
+  }
+  .change,.changeText {
+    color: $base-font-color;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  .order_limit .wgt-inlineInput {
+    width: 250px;
+  }
+  .receipt_type .wgt-inlineInput{
+    width: 200px;
+  }
+  .order_limit .wgt-inlineInput .select-input {
+    width: 300px;
+  }
+  .order_limit .wgt-inlineInput input.failTime {
+    padding-right: 0;
+  }
+  .receipt_type img,
+  .pay_type img {
+    vertical-align: middle;
+  }
+  .receiptType {
+  }
+  .receiptType span {
+    margin-left: 10px;
+  }
+  .pay_type .payType {
+    position: relative;
+    float: left;
+    margin-bottom:20px;
+    width:200px;
+  }
+  .pay_type .check {
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    visibility: hidden;
+  }
+  .pay_type .check + label {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $table-border-color;
+    vertical-align: middle;
+    background: $white-color;
+    border-radius:4px;
+    cursor: pointer;
+  }
+  .pay_type .check + label.labelCheck {
+    background: $input-focus-border;
+  }
+  .pay_type .check:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    bottom: 9px;
+    width: 9px;
+    height: 4px;
+    border: 2px solid $input-focus-border;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    -ms-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-45deg);
+  }
+
+  .pay_type img {
+    margin:0 5px 0 10px;
+  }
+  .pay_type span {
+    margin-right: 30px;
+  }
+  .remark p {
+    height: 50px;
+    line-height: 50px;
+  }
+  .remark textarea {
+    width: 600px;
+    height: 60px;
+    text-indent: 10px;
+    padding-top: 10px;
+    line-height: 15px;
+    padding: 5px;
+  }
+  .remark button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .order_limit .wgt-inlineInput input {
+    padding-right: 50px;
+  }
+  .receipt_type .wgt-inlineInput input{
+    padding-right:30px
+  }
+  .boxs {
+    position: relative;
+    .wgt-inlineInput {
+      position: relative;
+      .error-info {
+        position: absolute;
+        top: 45px;
+        left: 0;
+        padding: 0;
+      }
+    }
+  }
+  .error {
+    color: $red-color;
+    line-height: 22px;
+    clear:both;
+    margin-bottom: 20px;
+  }
+  .tdSpan {
+    display:inline-block;
+    float:left;
+    line-height:42px;
+    margin-right:10px;
+  }
+  .account{
+    margin:0 10px 0 50px;
+  }
+  .accName {
+    position:relative;
+    float:left;
+  }
+  .accName .wgt-inlineInput {
+    width:100px;
+  }
+  .change{
+    position:relative;
+    float:left;
+  }
+  .right,.rightN{
+    height:18px;
+    width:18px;
+    border-radius:50%;
+    background:$blue-font-color;
+    position:absolute;
+    top:11px;
+    left:208px;
+    z-index:11;
+  }
+  .rightN{
+   left:108px;
+  }
+  .right b,.rightN b{
+      position: absolute;
+      width: 6px;
+      height: 10px;
+      border-bottom: 1px solid;
+      color: #fff;
+      border-right: 1px solid;
+      left: 50%;
+      top: 50%;
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      -webkit-transform: translate(-50%, -60%) rotate(45deg);
+      transform: translate(-50%, -60%) rotate(45deg);
+  }
+  .dragDiv{
+    width:50%;
+  }
+  .order_type .wgt-inlineInput {
+    position: relative
+    .error-info {
+      position: absolute;
+      left: 0;
+      top: 32px;
+    }
+  }
+}

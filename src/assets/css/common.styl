@@ -1,0 +1,404 @@
+body, html, .container {
+  height: 100%;
+  background: $base-background-color;
+  color: $base-font-color;
+  min-width: 1200px;
+}
+.container{
+  position: relative;
+}
+body, html{
+  max-width: 1920px;
+  min-width: 1150px;
+  margin: 0 auto;
+}
+body .VuePage {
+  display: block !important; 
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+  padding: 0 10px;
+}
+.clearfix:after, 
+.wrap:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+/* 背景颜色 */
+
+.bg-color {
+  background: $base-background-color; 
+}
+
+/* 前景色 */
+
+.front-color {
+  background: $sub-background-color;
+}
+
+/* 字体颜色 */
+
+.font-color {
+  color: $base-font-color;
+}
+
+/* 背景图 */
+
+.bg-img {
+  background-image: url($base-bgi);
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+/*登陆，注册，忘记密码 tab切换颜色*/
+
+.tag-switch {
+  border-bottom: 2px solid $blue-font-color;
+  color: $blue-font-color;
+}
+
+/* 表头颜色 */
+
+.thead-color {
+  color: $explain-font-color
+}
+
+/* 列表状态颜色 */
+
+.state-color {
+  color: $blue-font-color;
+}
+
+/* api,问题页 tab切换颜色 */
+
+.tag-color {
+  border-bottom: 1px solid $blue-font-color;
+  color: $blue-font-color;
+}
+
+/* 标签颜色 */
+
+.label {
+  color: $form-title;
+}
+
+/* 按钮颜色 */
+
+.btn-color {
+  background: $blue-font-color;
+  color: $base-font-color;
+}
+
+/* 时间颜色 */
+
+.time-color {
+  color: $explain-font-color;
+}
+
+/* 下拉框背景颜色 */
+
+.text-bg {
+ background: $sub-background-color;
+ border: 1px solid $border-blue-color;
+}
+
+// 上涨 买进 绿色
+
+.c-rise,
+.col-red {
+  color: $buy-color;
+}
+
+// 下跌 卖出 绿色
+
+.c-fall,
+.col-fall, 
+.fall-color {
+  color: $sell-color;
+}
+
+// 下跌 卖出 背景颜色 红色
+.sell-button {
+  background: $sell-color;
+}
+// 上涨 买进 背景颜色 绿色
+.buy-button {
+  background: $buy-color;
+}
+
+a {
+  color: $blue-font-color
+}
+a:hover {
+  color: $blue-font-hover
+}
+
+
+// 默认 文本框样式
+textarea {
+  resize: none;
+  -webkit-appearance: none;
+  border: 1px solid $border-blue-color;
+  background: $input-background;
+  height: 36px;
+  width: 98%;
+  padding: 1%;
+  color: $base-font-color;
+  border-radius: 2px;
+}
+textarea:focus {
+  border: 1px solid $input-focus-border;
+}
+.textarea {
+  height: 120px;
+  line-height: 20px;
+}
+input {
+  background-color: $input-background;
+  border: 1px solid $border-blue-color;
+  height: 36px;
+  width: 100%;
+  color: $base-font-color;
+  border-radius: 2px;
+  box-shadow: none;
+  letter-spacing:1px
+}
+// 默认输入框 样式
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important; 
+  margin: 0; 
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: $input-background !important;
+    background-image: none !important;
+    // color: $gray-font-color !important;
+    -webkit-box-shadow: 0 0 0 30px $input-background inset;
+    -webkit-text-fill-color: $base-font-color !important;
+}
+input::-webkit-input-placeholder{
+    color: $gray-font-color
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color: $gray-font-color
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color: $gray-font-color
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color: $gray-font-color
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input:focus {
+  border: 1px solid $input-focus-border;
+}
+input[type='radio'] {
+  display: inline;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+}
+button {
+  height: 52px
+  background: $blue-font-color;
+  color: $base-font-color;
+  display: inline-block;
+  text-align: center;
+  border-radius: 2px;
+  color: $white-color;
+}
+button:hover {
+  opacity: 0.85;
+}
+button.cancel {
+  background: none;
+  border: 1px solid $explain-font-color;;
+  color: $explain-font-color;
+}
+button.readOnly {
+  opacity: 0.3;
+  cursor: initial;
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+
+.button {
+  color: $white-color;
+  &.cancel {
+    color: $explain-font-color;
+  }
+}
+.clearfix, .wrap {
+  zoom: 1;
+  position: relative;
+}
+.textfix {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.borderbox {
+  -moz-box-sizing: border-box; /* Firefox3.5+ */
+  -webkit-box-sizing: border-box; /* Safari3.2+ */
+  -o-box-sizing: border-box; /* Opera9.6 */
+  -ms-box-sizing: border-box; /* IE8 */
+  box-sizing: border-box;
+}
+
+/* 场外用户头像相关 */
+.res-header {
+  position: absolute
+  left: 36px
+  top: 13px
+}
+/* 头像框 */
+.o-headerA, .o-headerB {
+  display: inline-block
+  width: 48px
+  height: 48px
+  vertical-align: middle
+  position: relative
+}
+.o-headerA img, .o-headerB img { 
+  width: 44px
+  height: 44px
+  border-radius: 50%
+  border-width: 2px
+  border-style: solid
+} 
+.o-headerA:after, .o-headerB:after { 
+  content: ''
+  width: 9px
+  height: 9px
+  border-radius: 50%
+  border: 3px solid #fff
+  z-index: 2
+  position: absolute
+  right: 0
+  bottom: 0
+} 
+/* 头像在线 */
+.o-headerA img { 
+  border-color: #62E897
+} 
+.o-headerA:after { 
+  background: #62E897
+} 
+/* 头像不在线 */
+.o-headerB img { 
+  border-color:  #7E93A8
+  opacity: 0.7
+} 
+.o-headerB:after { 
+  background:#7E93A8
+} 
+
+
+//  暂无数据 样式 
+.table_no_data {
+  padding: 30px 0;
+  text-align: center
+}
+.table_no_data  span {
+  display: block;
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+}
+
+// 翻页样式
+.pagination {
+  overflow: hidden;
+  display: table;
+  margin: 0 auto;
+  padding-top: 20px;
+  height: 28px;
+  li{
+    float: left;
+    border-radius: 5px;
+    margin: 3px;
+    border: none;
+    color: rgba(0,0,0,0.90);
+    &:hover{
+      color: $blue-font-color;;
+    }
+    &:hover a{
+      color: $blue-font-color;;
+    }
+    a {
+      display: block;
+      padding: 0 5px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 14px;
+      color: $gray-font-color;
+      border-radius: 5px;
+      text-decoration: none
+    }
+  }
+  .active{
+    color: $blue-font-color;
+  }
+  .active a{
+    color: $blue-font-color;
+  }
+  .go-page {
+    margin-left: 30px;
+    color: $gray-font-color;
+    &:hover {
+      color: $gray-font-color;
+    }
+    .go-input {
+      display: inline-block;
+      width: 30px;
+      padding: 0 3px;
+      height: 20px;
+    }
+    button {
+      height: 20px;
+      padding: 0 10px;
+      margin-left: 5px;
+    }
+  }
+}
+.happy-scroll-strip--vertical {
+  z-index: 10
+}
+.happy-scroll-strip--vertical .happy-scroll-bar {
+  border-radius: 3px !important;
+}
+.borderbox{
+  -moz-box-sizing: border-box; /*Firefox3.5+*/
+  -webkit-box-sizing: border-box; /*Safari3.2+*/
+  -o-box-sizing: border-box; /*Opera9.6*/
+  -ms-box-sizing: border-box; /*IE8*/
+  box-sizing: border-box;
+}
+#page-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: $base-background-color;
+  z-index: 999;
+}
+#page-loading .bar  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3D(-50%, -50%, 0);
+  transform: translate3D(-50%, -50%, 0);
+}
+

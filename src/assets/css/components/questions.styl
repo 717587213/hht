@@ -1,0 +1,156 @@
+.ques-main {
+  min-height: calc(100vh - 207px);
+  background: $base-background-color ;
+  margin-bottom:20px;
+  color: $base-font-color;
+  .ques-main-content {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background:$sub-background-color;
+    border-radius:4px;
+    min-height:400px;
+
+    .ques-tag {
+      height: 60px;
+      line-height: 60px;
+      overflow: hidden;
+      border-bottom: 1px solid $base-background-color;
+      padding-left: 24px;
+
+      .tab_switch {
+        border-bottom: 1px solid $blue-font-color ;
+        color: $blue-font-color ;
+      }
+
+      li {
+        display: inline-block;
+        float: left;
+        display: inline-block;
+        margin: 0 25px;
+        font-size: 16px;
+        cursor: pointer;
+        float: left;
+        height: 59px;
+      }
+    }
+
+    .ques-wrap {
+      text-align: center;
+    }
+
+    // 发起提问
+    .ques {
+      margin-top: 20px;
+      text-align: center;
+      display:none;
+
+      .chios {
+        display: inline-block;
+        width: 360px;
+        margin-bottom: 20px;
+      }
+      .warrel textarea {
+        width: 340px;
+        height: 178px;
+        padding: 10px;
+        line-height: 15px;
+        border-radius: 2px;
+      }
+
+      .upfile {
+        margin-top: 20px;
+        font-size: 12px;
+
+        span {
+          text-align: left;
+          display: inline-block;
+          padding: 5px 20px;
+          font-size: 12px;
+          position: relative;
+          border-radius: 2px;
+          margin-right: 20px;
+          background: $base-background-color;
+          border: 1px solid $border-blue-color ;
+        }
+
+        input {
+          display: inline-block;
+          opacity: 0;
+          height: 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      button {
+        width: 263px;
+        font-size: 16px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 2px;
+        margin: 10px 0 40px 0;
+      }
+    }
+      /* 问题列表 */
+    .ques-list {
+      display: none;
+      text-align:center;
+      .loading{
+        	 height:30px;
+	          width:30px;
+	 margin :10% auto;
+      }
+  .list {
+    padding: 20px;
+    .record{
+      line-height:55px;
+      font-size:14px;
+      line-height:400px;
+    }
+    .list-table {
+      width: 100%;
+
+      thead {
+        font-size: 12px;
+
+        th {
+          padding: 10px;
+        }
+      }
+
+      tbody {
+        td {
+        padding: 10px;
+      }
+      .content{
+        text-align:left;
+        max-width: 500px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      }
+
+      .state {
+        font-size: 12px;
+        cursor: pointer;
+        color: $blue-font-color
+
+
+        span {
+          margin-right: 10px;
+
+        }
+      }
+    }
+  }
+
+
+}
+    .exhibition{
+    display:block;  
+    }
+  }
+}

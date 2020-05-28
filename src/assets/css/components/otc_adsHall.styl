@@ -1,0 +1,194 @@
+	.pointer{
+      cursor:pointer !important;
+    }
+	.ads_list{
+		width: 1200px;
+		margin: 20px auto;
+		overflow: hidden;
+		min-height: 600px;
+		background: $sub-background-color;
+
+	.ads_list_top{
+			height: 60px;
+			border-bottom: 3px solid $table-border-color;
+			padding: 10px 10px 10px 25px;
+		}
+	.buy{
+		float: left;
+		height: 60px;
+		border-right: 1px solid $table-border-color;
+	}
+	.sell{
+		float: left;
+		height: 60px;
+		margin-left: 20px;
+	}
+	.buy p,.sell p {
+		height: 30px;
+	  color: $base-font-color;
+	  line-height: 30px;
+		font-size:16px;
+	}
+	.buy p.buyText {
+	  color: $buy-color;
+	}
+	.sell p.sellText {
+	  color: $sell-color;
+	}
+	.buy ul li,.sell ul li {
+		float: left;
+		margin-right: 25px;
+		height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+	}
+	.activeCoinSell{
+		color: $sell-color;
+		border-bottom: 3px solid $sell-color;
+	}
+	.activeCoinBuy{
+		color: $buy-color;
+		border-bottom: 3px solid $buy-color;
+	}
+	.list_con .loading{
+		height: 30px;
+    width: 51px;
+    margin: 20% auto;
+	}
+	.list_con table{
+		width: 100%;
+		text-align: center;
+	}
+	.list_con table tr:nth-child(2n){
+		background: $subheade-background-color;
+	}
+	.list_con table th{
+		font-size: 12px;
+    font-weight: normal;
+    color: $explain-font-color;
+    height: 40px;
+    line-height: 40px;
+	}
+	.list_con table td{
+		height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+	}
+	.list_con table tr:hover{
+		background:$table-border-color;
+	}
+	.type{
+		float: right;
+		margin-top: 9px;
+	}
+	.type .wgt-inlineInput{
+		float: left;
+		margin-right: 15px;
+	}
+	.sort{
+		cursor: pointer;
+	}
+	.receet{
+		display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: relative;
+	}
+	.receet i{
+		position: absolute;
+	}
+	.iconNoFont-sup,.iconNoFont-sdow{
+		display: block;
+    height: 0;
+    width: 0;
+    line-height: 0;
+    border-style: solid;
+    border-width: 4px;
+	}
+	.iconNoFont-sup{
+		border-color: rgba(0,0,0,0) rgba(0,0,0,0) $explain-font-color rgba(0,0,0,0);
+	}
+	.iconNoFont-sdow{
+	  border-color: $explain-font-color rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+	}
+	.up{
+		top: 2px;
+	}
+	.down{
+		top: 12px;
+	}
+	.cur{
+		color: $blue-font-color;
+	}
+  .up.cur,.up.curr{
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) $blue-font-color rgba(0,0,0,0);
+  }
+  .down.cur,.down.curr{
+  	border-color: $blue-font-color rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+  }
+  .imgBox{
+  	 display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+		position:relative;
+		line-height:34px;
+  }
+	.img{
+    
+    border-radius: 50%;
+    position:absolute;
+    left:0;
+    
+  }
+	
+
+  .buyButton,.sellButton{
+  	height: 24px;
+  	line-height: 24px;
+  	padding:0 5px;
+  }
+	.sellButton{
+		background:$buy-color;
+	}
+	.buyButton{
+		background:$sell-color;
+	}
+  .buyButton:hover,.sellButton:hover{
+  	opacity:1;
+  }
+	.page nav{
+		margin-top: 8px;
+	}
+	.list_con table td.noMessage{
+		height: 480px;
+			line-height: 480px;
+			font-size: 14px;
+	}
+  .loginStatus{
+		height:8px;
+		width:8px;
+		border-radius:50%;
+		position:absolute;
+		background:$blue-font-color
+		bottom:0;
+		right:0;
+	}
+	.payMent{
+	text-align:left !important;
+	padding-left:40px !important;
+	}
+	.list_con tr.noHover:hover{
+	 background:$subheade-background-color;
+	}
+	.list_con tr.noHoverTh:hover{
+	 background:none;
+	}
+	.list_con tr .first{
+	  text-align: left;
+    text-indent: 20px;
+	
+	}
+}

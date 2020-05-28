@@ -1,0 +1,40 @@
+.otc-inp{
+    background:$input-background;
+    border: 1px solid $border-blue-color;
+    border-radius: 4px;
+    .payicon{
+          width:18px;
+          height:18px;
+          border-radius:50%;
+          margin:6px;
+          float:left;
+    }
+    width:100%;
+    height:38px;
+    line-height:38px;
+    .select{
+        float:left;
+        display:inline-block;
+        width:18px;
+        height:18px;
+        background:$blue-font-color;
+        border-radius:50%;
+        margin-top:8px;
+        position:relative;
+             .yes{
+                 position:absolute;
+                 width:6px;
+                 height:10px;
+                 border-bottom: 1px solid;
+                 color:#fff;
+                 border-right: 1px solid;
+                 left: 50%;
+                 top: 50%;
+                 transform-origin: center;
+                 transform: translate(-50%, -60%) rotate(45deg);                
+                }
+            }
+}
+.active{
+    border:1px solid $input-focus-border;
+}

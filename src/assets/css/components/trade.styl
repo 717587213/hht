@@ -1,0 +1,1007 @@
+.coinTran {
+  color:  $base-font-color
+  transition:all 0.3s linear
+  .trade-center {
+      padding: 10px 0px 0;
+      width: auto;
+      min-width: 1160px;
+      max-width: 1920px
+      width: 100%;
+  }
+  .item-block {
+    background: $sub-background-color
+    margin-bottom: 10px;
+    border: 1px solid $bolok-border-color;
+  }
+  .left-sidebar {
+    float: left;
+    width: 283px;
+  }
+  .right-main {
+    width:calc(100% - 293px)
+    float:left;
+    padding-left: 10px;
+  }
+  .center-column {
+    float: left;
+    width:calc(100% - 327px)
+    margin-right: 10px;
+    position: relative;
+  }
+  .right-column {
+    width: 317px;
+    float: right;
+  }
+  .infor-bar {
+    padding: 17px 0;
+    font-size: 12px;
+    .tr-top {
+      height:36px;
+      td {
+        text-align: center;
+        vertical-align: middle;
+        padding-top:5px;
+        width:1%;
+        span {
+          display:block;
+          line-height:18px;
+        }
+        &.tr-top-title {
+          padding-top:0;
+          border-right: 1px solid $border-blue-color;
+          span {
+            border-right: 1px solid $gray-font-color;
+            line-height:41px;
+            height: 41px;
+            padding-top:0;
+            font-size: 14px;
+            display: block;
+            img {
+              vertical-align: middle;
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+        &.tr-new-price {
+          padding-left: 1px;
+          
+        }
+      }
+    }
+  }
+  .tr-list {
+    li {
+      position: relative;
+      border-bottom: 1px solid $table-border-color;
+      height: 30px;
+      line-height: 30px;
+      overflow: hidden;
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        z-index: 2;
+        &.tr-mName, 
+        &.tr-mPrice, 
+        &.tr-mZdvol {
+          float: left
+        }
+        &.st {
+          color: #770077;
+        }
+      }
+      &.selected,
+      &:hover {
+        background: $list-hover-background;
+        color: $blue-font-color;
+      }
+    }
+  }
+  .tr-side-userMsg {
+    height: 74px;
+    padding-left: 30px;
+    background: $heade-background-color;
+    border-bottom: 1px solid $base-background-color;
+    font-size: 12px;
+    line-height: 16px;
+    .login-userMoney {
+      p {
+        padding: 15px 0 10px;
+        font-size: 14px;
+      }
+      .rmb {
+        display: inline-block;
+        font-size: 12px;
+        color: $explain-font-color;
+      }
+      .base-assets {
+        padding: 0;
+        font-size: 16px;
+      }
+    }
+    .user-noLogin {
+      padding-top: 30px;
+      display: block;
+      text-align: center; 
+    }
+  }
+  .myMarket-star,
+  .bz-table-icon {
+    display: inline-block;
+    width: 15px;
+    height: 16px;
+    background: url("../img/bz-sprite.png") no-repeat;
+    vertical-align: middle;
+    margin-right: 4px;
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+  }
+  .myMarket-star {
+    background-position: -4px -167px;       
+  }
+  .market-title-box {
+    background: $heade-background-color;
+    border-top: 1px solid $border-blue-color;
+    padding: 0 27px 0;
+    position: relative;
+    .slide-btn {
+      position: absolute;
+      top: 9px;
+      height: 21px;
+      line-height: 21px;
+      width: 21px;
+      text-align: center;
+      font-size: 14px;
+      cursor: pointer;
+      opacity: 0.2;
+      &.icon-left {
+        left: 2px;
+      }
+      &.icon-right {
+        right: 2px;
+      }
+      &.cur {
+        color: $blue-font-color;
+        opacity: 1;
+        &:hover {
+          background: $blue-font-color
+          color: $white-color
+        }
+      }
+    
+    }
+  }
+  .market-title-bar {
+    position: relative
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    overflow: hidden;
+    text-align: left;
+    position: relative
+  }
+  .market-title {
+    width: max-content;
+    white-space: nowrap;
+    position: absolute;
+    top:0;
+    left: 0;
+    transiton: all 0.2s linear; 
+    -webkit-transition: all 0.2s linear; 
+  }
+  .market-title li {
+    display: inline-block;
+    padding: 0 11px;
+    font-size: 14px;
+    border-top: 2px solid rgba(0,0,0,0);
+    cursor: pointer;
+    color: $explain-font-color
+  }
+  .market-title li:hover {
+    color: $blue-font-color;
+  }
+  .market-title li.selected {
+    border-color: $blue-font-color;
+    color: $blue-font-color;
+    background: $sub-background-color
+  }
+
+  .myMarket {
+    // float: left;
+  }
+  .market-list {
+    border-bottom: 1px solid $base-background-color;
+    font-size: 12px;
+    padding: 1px 0 10px;
+  }
+  .market-list .search-symblo {
+    margin: 15px 20px 18px;
+    cursor: pointer;
+    position: relative;
+    
+  }
+  .search-symblo .icon-search {
+    font-size: 18px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: $gray-font-color;
+  }
+  .market-list span {
+    display: inline-block;
+    text-align: center;
+    height: 15px;
+    font-size: 14px;
+  }
+  .market-list span .sort {
+    position: relative;
+    display: inline-block;
+    height: 15px;
+    width: 14px;
+    vertical-align: middle;
+    font-size: 10px;
+    i {
+      display:block;
+      height:0;
+      width:0;
+      line-height:0;
+      border-style:solid;
+      border-width:4px;
+      position: absolute;
+      left: 0;
+      &.iconNoFont-sup {
+        border-color:rgba(0,0,0,0) rgba(0,0,0,0) $explain-font-color rgba(0,0,0,0);
+        top: -3px;
+      }
+      &.iconNoFont-sdow {
+        border-color:$explain-font-color rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+        bottom: -1px;
+      }
+    }
+    &.selected {
+      .iconNoFont-sup.cur {
+        border-color:rgba(0,0,0,0) rgba(0,0,0,0) $blue-font-color rgba(0,0,0,0);
+      }
+      .iconNoFont-sdow.cur {
+        border-color:$blue-font-color rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+      }
+    }
+    
+  }
+  .market-list .search-symblo input {
+    padding-right: 35px;
+    width: 210px;
+    background: $input-background;
+    border-radius: 2px;
+    text-indent: 8px;
+    height: 28px;
+    line-height: 28px;
+    text-align: left;
+  }
+  .market-list .name {
+    width: 21%;
+    padding-left: 36px;
+    text-align: left;
+  }
+  .market-list .tr-mPrice {
+    width: 30%;
+    text-align: right;
+    cursor:pointer;
+  }
+  .market-list .tr-mZdvol {
+    width: 30%;
+    text-align: right;
+    position: relative;
+    cursor: pointer;
+  }
+  .market-list .tr-mZdvol .rose_icon {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    background: url('../img/rose_icon.png') no-repeat 12px 5px;
+  }
+  .market-list .type-more {
+    position: absolute;
+    width: 64px;
+    background: $base-background-color;
+    text-align: left;
+    line-height: 22px;
+    right: -3px;
+    top: 20px;
+    border: 1px solid $base-background-color;
+    border-right: none;
+    z-index: 6;
+    padding-top: 5px;
+  }
+  .market-list .type-more s {
+    display: inline-block;
+    padding-left: 10px;
+  }
+  .market-list .type-more s:hover { 
+    color:$blue-font-color; 
+  } 
+  .market-box {
+    height: 281px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+    font-size: 12px;
+    li {
+      height: 39px;
+      line-height: 39px;
+      padding-left: 15px;
+      text-align: left;
+      .tr-mName {
+        cursor: pointer;
+        width: 30%;
+        text-align: left
+        i {
+          color:$explain-font-color;
+          font-size: 14px;
+          position:relative;
+          top:-1px;
+          vertical-align:middle;
+        }
+        .select-mini {
+          color: $yellow-color;
+        }
+        .selected {
+          background-position: -4px -167px;
+        }
+      }
+      .tr-mPrice {
+        width: 33%;
+        cursor:pointer
+        text-align: right;
+      }
+      .tr-mPrice .show-hover {
+        display: none;
+      }
+      .tr-mPrice:hover .show-hover {
+        display: inline-block;
+      }
+      .tr-mPrice:hover .show-def {
+        display: none;
+      }
+      .tr-mZdvol {
+        width: 30%;
+        text-align: right;
+        padding: 0 0 0 5px;
+      }
+    }
+  }
+  
+  /* 深度合并 样式
+   * ==========================================================================================
+   * ==========================================================================================
+   */ 
+  .depth-block{
+    font-size: 12px;
+    .right-tabs{
+      padding: 10px 10px 0 10px;
+      height: 26px;
+      .switch-list {
+        float: left;
+        width: 110px;
+        span {
+          float: left;
+          width: 26px;
+          height: 17px;
+          border: 1px solid #8c9eb3;
+          margin-left: 4px;
+          cursor: pointer;
+          text-align: center;
+          line-height: 20px;
+          margin-top: -1px;
+          &.switch-red { 
+            color: $sell-color; 
+          } 
+          &.switch-blue { 
+            color: $buy-color; 
+          }
+          &.selected {
+            border: 1px solid $blue-font-color;
+          }
+        }
+      }
+      .switch-depth {
+        float: right;
+        select {
+          width: 87px;
+          background: $base-background-color;
+          color: $base-font-color;
+          border: 1px solid $base-background-color;
+        }
+      }
+    }
+    
+    .tr-newPrice {
+      height: 73px;
+      line-height: 73px;
+      text-align: center;
+      border-top: 1px solid $table-border-color;
+      border-bottom: 2px solid $table-border-color;
+      font-size: 18px;
+      clear: both;
+      i {
+        font-size: 16px;
+      }
+    }
+    .depth-list {
+      li {
+        height: 27px;
+        &.tr-list-title {
+          height: 27px;
+          line-height: 24px;
+          .tr-mPrice {
+            padding-left: 40px;
+            width: 28%;
+          }
+        }
+        span {
+          float: left;
+          height: 27px;
+          line-height:27px;
+          overflow: hidden;
+          padding-left: 5px;
+          &.tr-mPrice {
+            width: 24%;
+            padding-left: 50px;
+            cursor: pointer;
+            .show-type {
+              display: inline-block;
+              width: 35px;
+              position: absolute;
+              left: 10px;
+            }
+            .show-hover {
+              display: none;
+            }
+            &:hover {
+                .show-def {
+                  display: none;
+                }
+                .show-hover {
+                  display: inline-block;
+                }
+            }
+          }
+          &.tr-mName {
+            width: 25%;
+            text-align: right;
+          }
+          &.tr-mZdvol {
+            width: 27%;
+            text-align: right;
+            padding-left: 5px;
+          }
+          &.tr-bg {
+            position: absolute;
+            height: 27px;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            opacity: 0.16;
+            background: $sell-color;
+            padding: 0;
+            width: 0;
+            transiton: width 0.5s ease;
+            -webkit-transition: width 0.5s ease;
+          }
+        }
+      }
+    }
+    .depth-sell , .depth-buy {
+      transition: all 0.5s 0s;
+      overflow: hidden;
+      height:361px;
+      position: relative;
+      .buy-bar, .sell-bar {
+        height: 360px;
+      }
+    }
+    .depth-sell .sell-bar {
+      position: absolute;
+      left:0;
+      width: 100%;
+      bottom: 0;
+    }
+    .depth-sell.showSell ul {
+      // height: 720px;
+      transition: all 0.5s 0s;
+      overflow: hidden;
+      position: relative;
+    }
+    .depth-buy li span.tr-bg {
+      background: $buy-color;
+    }
+    
+    .showSell {
+      height: 720px;
+      transition: all 0.5s 0s;
+      overflow: hidden;
+      .buy-bar, .sell-bar {
+        height: 720px;
+      }
+    }
+    .hideHieght {
+      height: 0;
+      transition: all 0.5s 0s;
+    }
+
+  }
+  /* 交易办款 样式
+   * ==========================================================================================
+   * ==========================================================================================
+   */ 
+  .transaction-block {
+    font-size:  12px;
+    .errorText {
+      color: $red-color
+    }
+    .transaction-tabs {
+      height: 38px;
+      line-height: 38px;
+      z-index: 2;
+      top: -1px;
+      border-bottom: 1px solid $base-background-color;
+      li {
+        float: left;
+        height: 100%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 0 2px;
+        margin: 0 15px;
+        &.selected {
+          color: $blue-font-color;
+          border-bottom: 2px solid $blue-font-color;
+        }
+      }
+    }
+    .transaction-content {
+      position: relative;
+      z-index: 1;
+      padding: 8px 0 10px 0;
+      p {
+        height: 30px;
+        padding: 12px 0;
+        line-height: 30px;
+        font-size: 12px;
+        .t-title {
+          font-size: 17px;
+          .thisSymbolA {
+            margin-right: 5px;
+            color: $base-font-color;
+          }
+        }
+        .transaction-money {
+          float: right;
+        }
+        label {
+          display: inline-block;
+          width: 55px;
+          text-align: right;
+        }
+      }
+      .transaction-input {
+        input {
+          height: 30px;
+          margin-right: 5px;
+          width: 60%;
+          text-indent: 5px;
+        }
+      }
+      .transaction-sj {
+        text-align: center;
+        color: $aaa;
+        font-size:14px;
+      }
+      .transaction-button {
+        padding: 0;
+        height: 48px;
+        .button {
+          width: 100%;
+          height: 48px;
+          line-height: 48px;
+          text-align: center;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 3px;
+          opacity: 0.8;
+          display: block;
+          cursor: pointer;
+        }
+        .button-pass {
+          display: block;
+          input {
+            height: 27px;
+            line-height: 28px;
+            width: 200px;
+            text-indent: 5px;
+          }
+        }
+        .button-more {
+          display: block;
+          width: 100%;
+          height: 20px;
+          line-height: 20px;
+          margin-top: 10px;
+          .nopass {
+            float: right;
+          }
+        }
+      }
+      
+      .transaction-buy, 
+      .transaction-sell {
+        float: right;
+        width: 43.9%;
+        padding: 0 3%;
+        height: 337px;
+        color: $explain-font-color;
+        .disabled_button {
+          // cursor: no-drop;
+          background: rgba(0, 0, 0, 0.3);
+        }
+        .login_link {
+          color: $blue-font-color;
+        }
+      }
+      .transaction-buy {
+        border-right: 1px solid $border-blue-color;
+        float: left;
+      }
+    }
+    .transaction-drag { 
+      position: relative; 
+      width: calc(100% - 18px); 
+      height:20px; 
+    } 
+    .drag-def,
+    .drag-cover { 
+      position: absolute; 
+      display: block; 
+      height: 1px; 
+      top: 22px; 
+      left: 4px; 
+    } 
+    .drag-def { 
+      width: 100%; 
+      background: $border-blue-color; 
+    } 
+    .drag-cover { 
+      background: $input-focus-border; 
+    } 
+    .drag-turnColor { 
+      background: $input-focus-border; 
+    } 
+    .drag-step { 
+      position: absolute; 
+      left: 0%; 
+      display: block; 
+      top: -18px; 
+      border: 1px solid $blue-font-color
+      border-radius: 100%;
+      height:17px; 
+      width:17px; 
+      cursor: pointer;
+      z-index:5; 
+      &.transition {
+        transition: all .5s ease;
+      }
+      &:after {
+          content: '';
+          position: absolute;
+          background: $blue-font-color;
+          width: 11px;
+          height: 11px;
+          border-radius:100%;
+          top: 3px;
+          left: 3px;
+      }
+    } 
+    .transaction-drag i { 
+      background: $border-blue-color; 
+      position: absolute; 
+      top: 17px; 
+      display: block; 
+      width: 10px; 
+      height: 10px; 
+      cursor: pointer;
+      z-index: 4; 
+      border-radius: 50%; 
+    } 
+    .transaction-drag i.selected {
+      background: $input-focus-border
+    }
+    .transaction-drag i.drag-stepx { 
+      left: 4px; 
+    } 
+    .transaction-drag i.drag-step0 { 
+      left: calc(25% + 4px); 
+    } 
+    .transaction-drag i.drag-step1 { 
+      left: calc(50% + 4px); 
+    } 
+    .transaction-drag i.drag-step2 { 
+      left: calc(75% + 4px); 
+    } 
+    .transaction-drag i.drag-step3 { 
+      left: calc(100% + 4px); 
+    } 
+    .drag-step-wrap { 
+      display: inline-block; 
+      width: 100%; 
+      position: relative; 
+    } 
+  }
+  /* 最新成交板块 样式
+   * ==========================================================================================
+   * ==========================================================================================
+   */ 
+  .side-newDel {
+    .newDel-title{
+      height: 30px;
+      line-height: 28px;
+      padding-top: 2px;
+      padding-left: 20px;
+      span {
+        display: inline-block;
+        border-bottom:2px solid $blue-font-color;
+        color: $blue-font-color;
+      }
+    }
+    .market-box, .newDel-box {
+      height: 389px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+    .newDel-list {
+      font-size: 12px;
+      li {
+        height 34px;
+        span {
+          height: 34px;
+          line-height:33px;
+          overflow: hidden;
+        }
+        .tr-mName {
+          width:25%;
+          padding-left: 15px;
+          text-align: center;
+        }
+        .tr-mPrice{
+          width: 32%;
+          cursor: pointer;
+          text-align: right;
+          .show-hover {
+            display: none;
+          }
+          &:hover {
+            .show-def {
+              display:none;
+            }
+            .show-hover {
+              display: inline-block;
+          } 
+          }
+        }
+        .tr-mZdvol {
+          width:32%;
+          text-align: right;
+        }
+      }
+    }
+  }
+  /*  K线图 样式 */ 
+  .charts-block {
+    font-size: 12px;
+    height:458px;
+    position: relative;
+    overflow: hidden;
+    .tabs-chart {
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-align: right;
+      z-index: 99;
+      line-height: 30px;
+      span {
+        display: inline-block;
+        margin: 0 5px;
+        cursor: pointer;
+        &.selected {
+          color: $blue-font-color;
+        }
+      }
+    }
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      transition: all .5s ease;
+      overflow: hidden;
+      height: 100%;
+      z-index: 2;
+      &.selected {
+        transform: translateX(0%);
+        opacity: 1;
+        z-index: 3;
+      }
+    }
+  }
+  .order-data-list {
+    clear: both;
+    padding: 10px;
+    min-height: 256px;
+    transiton: all 0.2s linear; 
+      -webkit-transition: all 0.2s linear; 
+    .tab-nav {
+      height: 38px;
+      line-height: 38px;
+      z-index: 2;
+      top: -1px;
+      // border-bottom: 1px solid $table-border-color;
+      li {
+        float: left;
+        height: 100%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 0 10px;
+        margin: 0 10px;
+        &.selected {
+            color: $blue-font-color;
+            border-bottom: 1px solid $blue-font-color;
+        }
+      }
+      .refresh-btn {
+        float: right;
+      }
+    }
+    .order-list-box {
+      min-height: 150px;
+      transiton: all 0.2s linear; 
+      -webkit-transition: all 0.2s linear; 
+    }
+    table {
+      tr {
+        position: relative;
+        border-bottom: 1px solid $table-border-color;
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer;
+        overflow: hidden;
+         td {
+          text-align: center;
+         }
+         &:hover {
+          color: $blue-font-color;
+         }
+      }
+      .cancel_Deal {
+        color: $blue-font-color;
+        pading-bottom: 2px;
+        &:hover {
+          border-bottom: 1px solid $blue-font-color;
+          
+        }
+      }
+      .status_msg {
+        padding-right: 20px;
+        text-align: right;
+      }
+    }
+    .sibTable {
+      border: 1px solid $blue-font-color;
+      position: relative;
+      padding: 5px;
+      tr {
+        border: 0 none;
+        td{
+          color: $base-font-color;
+        }
+         &:hover {
+          td {
+            color: $blue-font-color;
+           }
+        }
+      }
+      &:after {
+          content: '';
+          width: 6px;
+          height: 6px;
+          display: block;
+          position: absolute;
+          right: 45px;
+          top: -4px;
+          border-top: 1px solid $blue-font-color;
+          border-left: 1px solid $blue-font-color;
+          background: $sub-background-color;
+          transform: rotate(45deg);
+      }
+    }
+  }
+  #kline-loading {
+    position: absolute;
+    background: $sub-background-color;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    .bar {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3D(-50%, -50%, 0);
+    }
+  }
+  .echart-box {
+    width 99%;
+  }
+  .no-data {
+    text-align: center;
+    padding-top: 15px;
+  }
+  .coverKlineBox {
+    position: absolute;
+    top: 30px;
+    left:0;
+    right: 0;
+    bottom: 0;
+  }
+  .flip-list-move {
+    transition: transform 0.6s;
+  }
+  .no_drop {
+    cursor: no-drop;
+  }  
+}
+//  页面动画 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .8s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

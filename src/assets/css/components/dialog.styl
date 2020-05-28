@@ -1,0 +1,125 @@
+.dialog-pop {
+  position: fixed;
+  top: 0
+  z-index: 999
+  .dialog-mark {
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+  }
+  .dialog-body {
+    transform: translateY(-50%);
+    position: fixed;
+    z-index: 31;
+    top: 50%;
+    left: 50%;
+    min-width: 450px;
+    min-height: 145px;
+    max-height: 600px;
+    background: $pop-content-background;
+    border-radius: 2px;
+    overflow: hidden;
+    opacity: 1;
+    border:1px solid $border-blue-color;
+  }
+  .dialog-title {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: $explain-font-color;
+    background: $pop-title-background;
+    border-bottom: 1px solid $table-border-color;
+    padding-left: 20px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    line-height: 40px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .dialog-close {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    right: 0px;
+    top: 13px;
+    font-size: 12px;
+    cursor: pointer;
+    // transition: all .3s ease; 
+  }
+  //  .dialog-close:hover {
+  //   transform: rotate(180deg);
+  // } 
+  .dialog-content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    max-height: 500px;
+    overflow: auto;
+  }
+  .dialog-footer {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .dialog-footer button {
+    height: 38px;
+    line-height: 38px;
+    min-width: 100px;
+    padding: 0 20px;
+    margin: 0 10px;
+  }
+  .dialog-footer .pop-cancel {
+    height: 36px;
+    line-height: 36px;
+    min-width: 100px;
+    display:inline-block;
+    margin: 0 10px;
+    color:$explain-font-color;
+    border-radius:2px;
+    border:1px solid $explain-font-color
+  }
+  .drop-enter-active {
+    transition: all .5s ease;
+  }
+  .drop-leave-active {
+    transition: all .5s ease;
+  }
+  .drop-enter {
+    transform: translateY(-80%);
+    opacity: 0;
+  }
+  .drop-leave-active {
+    transform: translateY(-80%);
+    opacity: 0;
+  }
+}
+
+.markedTip {
+  position: fixed;
+  background: $base-background-color;
+  border: 1px solid $blue-font-color;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  min-width: 180px;
+  border-radius: 5px;
+  color: $blue-font-color;
+  top: 10%;
+  font-size: 14px;
+  z-index: 9999;
+  text-align: center;
+}
+.markedTip_error {
+  border-color: $red-color;
+  color: $red-color;
+}

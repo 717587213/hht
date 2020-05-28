@@ -1,0 +1,532 @@
+  .busines {
+    min-height: calc(100vh - 207px);
+    margin-bottom:37px;
+    .busines-content{
+      width: 1200px;
+      margin: 0 auto;
+      border-radius:4px
+      margin-top: 30px;
+      background:$sub-background-color;
+        h3{
+            height:77px;
+            line-height:77px;
+            padding-left:42px;
+            font-size:16px;
+        }
+        .buy{
+            color:$buy-color;
+        }
+        .sell{
+            color:$sell-color;
+        }
+        .main{
+            .portrait{
+                cursor:pointer;
+                width:60px;
+                height:60px;
+                border-radius:50%;
+                padding-left:40px;
+                float:left;
+                position:relative;
+                img{
+                    width:60px;
+                    height:60px;
+                    border-radius:50%;
+                    
+                }
+                span{
+                    display:inline-block;
+                    width:15px;
+                    height:15px;
+                    border-radius:50%;
+                    background: $blue-font-color ;
+                    position:absolute;
+                    bottom:0;
+                    right:0
+                }
+            }
+            .portactive{
+                opacity:1
+            }
+            .infor{
+                float:left;
+                .infor-had{
+                    padding-left:20px;
+                    width:686px;
+                    border-bottom:1px solid $table-border-color;
+                    p{
+                        font-size:14px;
+                        .nickname{
+                            cursor:pointer;
+                        }
+                    }
+                    .payment{
+                        margin-left:20px;
+                        color:$buy-color;
+                    }
+                    .payments{
+                        margin-left:20px;
+                        color:$sell-color;
+                    }
+                    dl{
+                        margin-top:15px;
+                        float:left;
+                        margin-bottom:25px;
+                        font-size:13px;
+                    dt{
+                        margin-bottom:10px;
+                        color:$explain-font-color;
+                    }
+                
+                    }
+                    .praise,.history{
+                        margin-left:15px;
+                    }
+                    
+                }
+                .trans{
+                    padding:15px 0  25px 20px;
+                    width:686px;
+                    border-bottom:1px solid $table-border-color;
+                    li{
+                        .receivables{
+                            display:inline-block;
+                        }
+                        i{
+                            margin-right 15px;
+                        }
+                        line-height:30px;
+                        img{
+                            width:16px;
+                            height:16px;
+                            vertical-align: middle;
+                            margin-top:-2px;
+                            border-radius:50%;
+                        }
+                        span{
+                            color:$explain-font-color;
+                            margin-right:5px;
+                            display:inline-block;
+                            float:left;
+                        }
+                        b{
+                            margin-right:10px;
+                        }
+                    }
+                    .payment {
+                        .payment_item_icon {
+                            padding-left: 68px;
+                            b {
+                                display: inline-block;
+                                width: 90px;
+                            }
+                        }
+                    }
+                    .remarks{
+                        title{
+                            display:inline-block;
+                            float:left;
+                        }
+                        p{
+                            max-width:640px;
+                            float:left;
+                            display:inline-block;
+                            white-space: normal;
+                            word-wrap: break-word;
+                            word-break: break-all
+                        }
+                    }
+                }
+                .colse-adver{
+                    margin-top:100px;
+                    padding-left:20px;
+                    min-height:200px;
+                    color:$red-color
+                    font-size:16px;
+                    .adver{
+                        display:inline-block;
+                        color:#ffff;
+                        width:100px;
+                        height:40px;
+                        background:$blue-font-color;
+                        text-align:center;
+                        line-height:40px;
+                        cursor:pointer;
+                        margin-left:100px;
+                        border-radius:4px
+                    }
+                }
+                .busine{
+                    .exchange{
+                        .curren{
+                        float:left;
+                        .currency{
+                            width:203px;
+                            // height:38px;
+                            // background:$input-background;
+                            .input{
+                                position:relative;
+                                input{
+                                    text-indent:10px;
+                                }
+                                .selects{
+                                    display:inline-block;
+                                position:absolute;
+                                top:14px;
+                                right:10px;
+                              }
+                            }
+                            
+                            margin-top:13px;	
+                        }
+                        .whole{
+                            float:right;
+                            height:40px;
+                            line-height:40px;
+                            cursor:pointer;
+                            color:$blue-font-color 
+                        }
+                    }
+                    .change{
+                        width:40px;
+                        height:20px;
+                        display:inline-block;
+                        margin:35px 15px 0 15px;
+                        float:left;
+                     }
+                  }
+                    .sells{
+                    padding-left:20px;
+                    h4{
+                       line-height:56px; 
+                       margin-top:18px;
+                       font-size:16px;
+                       font-weight:bold;
+                       color:$sell-color;
+                    }
+                  .receivables{
+                      .addrecei{
+                          cursor:pointer;
+                          color:$blue-font-color
+                      }
+                      .branch{
+                          margin-top:12px;
+                          .rece-inp{
+                            margin-top:20px;
+                            .input{
+                                position:relative;
+                                input{
+                                    text-indent:10px;
+                                }
+                            }
+                            .payicon{
+                                display:inline-block;
+                                position:absolute;
+                                top:8px;
+                                left: 7px;
+                                z-index:2
+                            }
+                            .select{
+                                position:absolute;
+                                top:10px;
+                                right:10px;
+                                display:inline-block;
+                                width:18px;
+                                height:18px;
+                                background:$blue-font-color;
+                                border-radius:50%;
+                                .yes{
+                                    position:absolute;
+                                 width:6px;
+                                 height:10px;
+                                 border-bottom: 1px solid;
+                                 color:#fff;
+                                border-right: 1px solid;
+                                left: 50%;
+                                top: 50%;
+                                transform-origin: center;
+                                transform: translate(-50%, -60%) rotate(45deg);
+                                // -webkit-transform: translate(-50%, -30%) rotate(45deg);
+                                }
+                            }
+                         .transfer, .alipay{
+                                .headimg{
+                                    float:left;
+                                    display:inline-block;
+                                    margin-top:7px;
+                                }
+                            .account_open,.bank,.account_number,.account{
+                                    float:left;
+                                    margin-left:10px;
+                                    span{
+                                        float:left;
+                                        line-height:35px;
+                                    }
+                                    .inp{
+                                        float:left;
+                                        width:237px;
+                                    }
+                                    .accname{
+                                        width:130px;
+                                    }
+                                }
+                               
+                            }
+                        }
+                        .disables{
+                            opacity: 0.5;
+                        }
+                        .active{
+                             border:1px solid $input-focus-border;
+                        }
+                      }
+                  }
+                .cipher{
+                    margin-top: 20px;
+                    .title{
+                        display: block;
+                        .setcipher{
+                            cursor:pointer;
+                            color: $blue-font-color
+                        }
+                    }
+                    .cipherPwd{
+                        width: 205px;
+                        margin-top: 10px;
+                        text-indent: 10px;
+                    }
+                }
+                .pay_type .payType {
+                    position: relative; 
+                    float: left;
+                    margin-top:20px;
+                }
+                .pay_type .check {
+                    height: 18px;
+                    width: 18px;
+                    position: absolute;
+                    visibility: hidden;
+                }
+                .pay_type .check + label {
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    border: 1px solid $table-border-color;
+                    vertical-align: middle;
+                    background: $white-color;
+                    border-radius:4px;
+                    cursor: pointer;
+                 }
+                .pay_type .check:checked + label:after {
+                    content: "";
+                    position: absolute;
+                    left: 2px;
+                    bottom: 9px;
+                    width: 9px;
+                    height: 4px;
+                    border: 2px solid $input-focus-border;
+                    border-top-color: transparent;
+                    border-right-color: transparent;
+                    -ms-transform: rotate(-60deg);
+                    -moz-transform: rotate(-60deg);
+                    -webkit-transform: rotate(-60deg);
+                    transform: rotate(-45deg);
+                }
+                .pay_type img {
+                    margin: 0 5px;
+                     vertical-align: middle;
+                }
+                 .pay_type span {
+                    margin-right: 30px;
+                   
+                }
+                .pay_type .setPay a{
+                    display:block;
+                    margin-top:20px;
+                }
+                .submit{
+                    margin-top:30px;
+                    width:205px;
+                    height:48px;
+                    background:$sell-color;
+                    text-align:center;
+                    line-height:48px;
+                    border-radius:4px;
+                    font-size:16px;
+                    margin-bottom:40px;
+                    cursor:pointer;
+                    color:$white-color;
+                }
+               
+                }
+                .buys {
+                    padding-left:20px;
+                    h4{
+                       line-height:56px; 
+                       margin-top:18px;
+                       font-size:16px;
+                       font-weight:bold;
+                       color:$buy-color;
+                    }
+                    .exchange{
+                        .currency-inp{
+                            line-height:38px;
+                            .currency{
+                            width:148px;
+                            float:left;
+                           }
+                        }
+                        .method{
+                            float:left;
+                            margin-left:48px;
+                            .meth_title{
+                                display:inline-block;
+                                margin-bottom:13px;
+                            }
+                            .select{
+                                width:118px;
+                                height:38px;
+                                border:1px solid $border-blue-color;
+                                border-radius:4px;
+                                background:$input-background;
+                                position:relative;
+                                cursor:pointer;
+                                .triangle{
+                                    position:absolute;
+                                    right:8px;
+                                    top:10px;
+                                    width: 8px;
+                                    height: 8px;
+                                    border-bottom: 2px solid #fff;
+                                    border-left: 2px solid #fff;
+                                    transform: rotate(-45deg);           
+                                }
+                             input {
+                                 border: 0
+                                 height:38px;
+                                 line-height:38px;
+                                 width:80px;
+                                 cursor:pointer;
+                                 text-indent:10px;
+                             }
+                             .image{
+                                width:18px;
+                                height:18px;
+                                float:left;
+                                display:inline-block;
+                                margin:10px 0 10px 10px;
+                                border-radius: 100%;
+                             }
+                            }
+                            .drop{
+                                 position:absolute;
+                                 width:118px;
+                                 display:inline-block;
+                                 border:1px solid $border-blue-color;
+                                 background:$input-background;
+                                 border-top:0;
+                                 li{
+                                     height:30px;
+                                     line-height:30px;
+                                     cursor:pointer;
+                                     img{
+                                         width:18px;
+                                         height:18px;
+                                         margin: 5px 8px 5px 10px;
+                                        vertical-align: middle;
+                                        border-radius: 100%
+
+                                     }
+                                 }
+                                 li:hover{
+                                     background:$subheade-background-color ;
+                                     color:$blue-font-color;
+                                 }
+                             }
+                        }
+                        
+                    }
+                    .submit {
+                       margin-top:26px;
+                       width:205px;
+                       height:48px;
+                       background:$buy-color;
+                       text-align:center;
+                       line-height:48px;
+                       border-radius:4px;
+                       font-size:16px;
+                       margin-bottom:40px;
+                       cursor:pointer;
+                       color:$white-color;
+                    //    &:hover{
+                            
+                    //    }
+                    }
+                  }
+                }
+            }
+        }
+    }
+    .prompt{
+         text-align:center; 
+       h4{
+        color:$red-color;
+        font-size:16px;
+       }
+       span{
+           display:inline-block;
+           width:100px;
+           height:40px;
+           text-align:center;
+           line-height:40px;
+           background:$blue-font-color;
+           line-height:40px;
+           margin-top:50px;
+           border-radius:4px;
+           cursor:pointer;
+       }
+    }
+    .note{
+        color:$red-color;
+        height: 20px;
+    }
+    .left{
+        float: left;
+    }
+    .right{
+        float: right;
+    }
+    .subTitle{
+        color: $explain-font-color;
+        height: 30px;
+        margin-top: 20px;
+    }
+    .show{
+        height: 50px;
+        background: $input-background;
+        font-size: 16px;
+    }
+    .leftpay{
+        width: 45%;
+        float: left;
+        line-height: 50px;
+        text-align: center;
+    }
+    .changea{
+        float: left;
+        width: 10%;
+        line-height: 50px;
+        text-align: center;
+    }
+    .rightprice{
+        width: 45%;
+        float: left;
+        line-height: 50px;
+        text-align: center;
+    }
+    .count{
+        margin-left: 5px;
+        color: $explain-font-color;
+        font-size: 12px;
+    }
+  }

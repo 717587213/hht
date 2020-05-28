@@ -1,0 +1,105 @@
+  .notieInfo {
+     min-height: calc(100vh - 207px);
+     background: $base-background-color;
+     color: $base-font-color;
+     .notie-main {
+      width 1200px;
+      margin  0 auto;
+      padding-top:20px;
+        .notie-content{
+          width:620px;
+          float:left;
+          margin:0 0 20px 0;
+          background : $sub-background-color ;
+          padding:35px 70px;
+          min-height: 600px;
+          .time {
+            padding:0 0 10px;
+            color:$gray-font-color;
+          }
+           h2{
+             font-size:20px;
+             padding-bottom:6px;
+             margin-bottom:15px;
+             line-height:30px;
+             // border-bottom:1px solid $explain-font-color;
+           }
+           .const{
+             line-height:26px;
+              word-wrap: break-word !important;
+              word-break: normal !important;
+            p{
+              padding-bottom:10px;
+              word-wrap: break-word !important;
+              word-break: normal !important;
+            }
+           }
+        }
+        .notie-side {
+          float:right;
+          margin-right:35px;
+          width:350px;
+          padding:10px 0 38px 0;
+          // background:$sub-background-color ;
+          border-radius:4px;
+           li {
+              height:40px;
+              line-height:40px;
+              cursor: pointer;
+            }
+            li.active {
+              color:$blue-font-color;
+            }
+            li:hover {
+              // text-decoration: underline;
+            }
+           .article-head{
+             padding-bottom:30px;
+             font-size:16px;
+             color:$base-font-color;
+             border-bottom:1px solid $explain-font-color;
+             margin-bottom:15px;
+           }
+           .notice-list{
+            li{
+              margin:5px 0;
+              height:30px;
+              line-height:30px;
+              position:relative;
+              cursor: pointer;
+              padding-left:20px;
+              overflow:hidden;
+              padding-right:30px;
+              color:$explain-font-color;
+              &:before{
+                content:'';
+                position:absolute;
+                line-height:0;
+                overflow:hidden;
+                width:0;
+                height:0;
+                border:1px solid $explain-font-color;;
+                top:50%;
+                left:10px;
+                border-radius:50%;
+              }
+              &.active {
+                color:$base-font-color
+                // border-bottom:1px solid $base-font-color;
+                display:inline-block;
+                font-size:14px;
+                &:before{
+                  border:1px solid $base-font-color;
+                  opacity:0.7;
+                }
+              }
+            }
+           }
+        }
+     }
+     .page{
+         color:$base-font-color;
+         border-top:1px solid $explain-font-color;
+         margin-top:20px;
+     }
+  }
